@@ -15,6 +15,7 @@ public protocol QuestTradeAPIInterface {
 
 public final class QuestTradeAPI: QuestTradeAPIInterface {
     private let actionHandler = QuestTradeHttpActionHandler()
+    private let authenticationActionHandler = QuestTradeAuthenticationHttpActionHandler()
 
     // MARK: - Initializer
 
