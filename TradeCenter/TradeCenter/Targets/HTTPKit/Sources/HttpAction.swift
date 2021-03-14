@@ -1,6 +1,6 @@
 import Foundation
 
-protocol HttpAction {
+public protocol HttpAction {
 
     associatedtype Response
     typealias ResultType = Result<Response, Error>

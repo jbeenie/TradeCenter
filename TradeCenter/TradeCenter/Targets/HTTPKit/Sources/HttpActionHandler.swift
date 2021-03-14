@@ -1,13 +1,13 @@
 import Foundation
 
 /// An http session action handler that consolidates `URLSession` logic in a reusable mannor for different network api's
-class HttpActionHandler {
+open class HttpActionHandler {
 
-    private let baseUrl: URL
+    public let baseUrl: URL
 
     // MARK: Init
 
-    init(baseUrl: URL) {
+    public init(baseUrl: URL) {
         self.baseUrl = baseUrl
     }
 
@@ -19,7 +19,7 @@ class HttpActionHandler {
     ///   - action: The http action to process
     ///   - completionQueue: The dispatch queue to complete the action on
     ///   - completion: Handle the network result on the given completion queue
-    func run<T: HttpAction>(action: T,
+    public func run<T: HttpAction>(action: T,
                             completionQueue: DispatchQueue = .main,
                             completion: @escaping (T.ResultType) -> Void) {
         process(action: action, completionQueue: completionQueue) { [weak self] result in

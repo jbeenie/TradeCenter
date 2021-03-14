@@ -1,3 +1,3 @@
 import Foundation
 
-typealias HttpHeader = (key: String, value: String)
+public typealias HttpHeader = (key: String, value: String)
