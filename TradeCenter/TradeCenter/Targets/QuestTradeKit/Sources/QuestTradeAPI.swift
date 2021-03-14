@@ -17,6 +17,9 @@ public final class QuestTradeAPI: QuestTradeAPIInterface {
     private let actionHandler = QuestTradeHttpActionHandler()
     private let authenticationActionHandler = QuestTradeAuthenticationHttpActionHandler()
 
+    /// Token Generated from quest trade which enables API access.
+    private let authToken = "ar4rYqij57-zU2hCfCaz3Hi3ygFQy63z0"
+
     // MARK: - Initializer
 
     public init() {}
