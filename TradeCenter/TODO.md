@@ -2,7 +2,7 @@
 
 1. Create Quest trade API framework
 
-    a. Create HTTPKit Framework for making HTTP Requests
+    a. Create HTTPKit Framework for making HTTP Requests (DONE)
         
 
     b. Create QuestTradeKit framework for making REST API calls to Quest trade

@@ -21,6 +21,11 @@
 		A6CB90B225FE98A500611B46 /* HttpActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB90AC25FE98A500611B46 /* HttpActionHandler.swift */; };
 		A6CB90B325FE98A500611B46 /* HttpAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB90AD25FE98A500611B46 /* HttpAction.swift */; };
 		A6CB90B425FE98A500611B46 /* HttpContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB90AE25FE98A500611B46 /* HttpContentType.swift */; };
+		A6CB90C325FE9A1E00611B46 /* QuestTradeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB90BA25FE9A1E00611B46 /* QuestTradeKit.framework */; };
+		A6CB90CA25FE9A1E00611B46 /* QuestTradeKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB90C925FE9A1E00611B46 /* QuestTradeKitTests.swift */; };
+		A6CB90CC25FE9A1E00611B46 /* QuestTradeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A6CB90BC25FE9A1E00611B46 /* QuestTradeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6CB90CF25FE9A1E00611B46 /* QuestTradeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB90BA25FE9A1E00611B46 /* QuestTradeKit.framework */; };
+		A6CB90D025FE9A1E00611B46 /* QuestTradeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB90BA25FE9A1E00611B46 /* QuestTradeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +35,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = A6CB909525FE96CF00611B46;
 			remoteInfo = HTTPKit;
+		};
+		A6CB90C425FE9A1E00611B46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6CB907325FE85D700611B46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6CB90B925FE9A1E00611B46;
+			remoteInfo = QuestTradeKit;
+		};
+		A6CB90C625FE9A1E00611B46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6CB907325FE85D700611B46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6CB907A25FE85D700611B46;
+			remoteInfo = TradeCenter;
+		};
+		A6CB90CD25FE9A1E00611B46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6CB907325FE85D700611B46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6CB90B925FE9A1E00611B46;
+			remoteInfo = QuestTradeKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -41,6 +67,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				A6CB909E25FE96CF00611B46 /* HTTPKit.framework in Embed Frameworks */,
+				A6CB90D025FE9A1E00611B46 /* QuestTradeKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +92,12 @@
 		A6CB90AC25FE98A500611B46 /* HttpActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpActionHandler.swift; sourceTree = "<group>"; };
 		A6CB90AD25FE98A500611B46 /* HttpAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpAction.swift; sourceTree = "<group>"; };
 		A6CB90AE25FE98A500611B46 /* HttpContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpContentType.swift; sourceTree = "<group>"; };
+		A6CB90BA25FE9A1E00611B46 /* QuestTradeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuestTradeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6CB90BC25FE9A1E00611B46 /* QuestTradeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestTradeKit.h; sourceTree = "<group>"; };
+		A6CB90BD25FE9A1E00611B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6CB90C225FE9A1E00611B46 /* QuestTradeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestTradeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6CB90C925FE9A1E00611B46 /* QuestTradeKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTradeKitTests.swift; sourceTree = "<group>"; };
+		A6CB90CB25FE9A1E00611B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6CB909D25FE96CF00611B46 /* HTTPKit.framework in Frameworks */,
+				A6CB90CF25FE9A1E00611B46 /* QuestTradeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +117,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A6CB90B725FE9A1E00611B46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6CB90BF25FE9A1E00611B46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6CB90C325FE9A1E00611B46 /* QuestTradeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -90,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				A6CB907D25FE85D700611B46 /* TradeCenter */,
-				A6CB909725FE96CF00611B46 /* HTTPKit */,
 				A6CB907C25FE85D700611B46 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,6 +148,8 @@
 			children = (
 				A6CB907B25FE85D700611B46 /* TradeCenter.app */,
 				A6CB909625FE96CF00611B46 /* HTTPKit.framework */,
+				A6CB90BA25FE9A1E00611B46 /* QuestTradeKit.framework */,
+				A6CB90C225FE9A1E00611B46 /* QuestTradeKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,7 +160,6 @@
 				A6CB908F25FE959800611B46 /* TODO.md */,
 				A6CB908E25FE867700611B46 /* Targets */,
 				A6CB908225FE85DA00611B46 /* Assets.xcassets */,
-				A6CB908725FE85DA00611B46 /* Info.plist */,
 				A6CB908825FE85DA00611B46 /* TradeCenter.entitlements */,
 			);
 			path = TradeCenter;
@@ -120,18 +169,11 @@
 			isa = PBXGroup;
 			children = (
 				A6CB90A425FE96E000611B46 /* HTTPKit */,
+				A6CB90BB25FE9A1E00611B46 /* QuestTradeKit */,
+				A6CB90C825FE9A1E00611B46 /* QuestTradeKitTests */,
 				A6CB90A325FE96D600611B46 /* TradeCenter */,
 			);
 			path = Targets;
-			sourceTree = "<group>";
-		};
-		A6CB909725FE96CF00611B46 /* HTTPKit */ = {
-			isa = PBXGroup;
-			children = (
-				A6CB909825FE96CF00611B46 /* HTTPKit.h */,
-				A6CB909925FE96CF00611B46 /* Info.plist */,
-			);
-			path = HTTPKit;
 			sourceTree = "<group>";
 		};
 		A6CB90A325FE96D600611B46 /* TradeCenter */ = {
@@ -146,6 +188,7 @@
 		A6CB90A425FE96E000611B46 /* HTTPKit */ = {
 			isa = PBXGroup;
 			children = (
+				A6CB90D925FE9A8400611B46 /* Resources */,
 				A6CB90A825FE988C00611B46 /* Sources */,
 			);
 			path = HTTPKit;
@@ -163,6 +206,7 @@
 		A6CB90A725FE982900611B46 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A6CB908725FE85DA00611B46 /* Info.plist */,
 				A6CB908425FE85DA00611B46 /* Main.storyboard */,
 			);
 			path = Resources;
@@ -171,12 +215,71 @@
 		A6CB90A825FE988C00611B46 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A6CB909825FE96CF00611B46 /* HTTPKit.h */,
 				A6CB90AD25FE98A500611B46 /* HttpAction.swift */,
 				A6CB90AC25FE98A500611B46 /* HttpActionHandler.swift */,
 				A6CB90AE25FE98A500611B46 /* HttpContentType.swift */,
 				A6CB90A925FE98A500611B46 /* HttpError.swift */,
 				A6CB90AA25FE98A500611B46 /* HttpHeader.swift */,
 				A6CB90AB25FE98A500611B46 /* HttpMethod.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A6CB90BB25FE9A1E00611B46 /* QuestTradeKit */ = {
+			isa = PBXGroup;
+			children = (
+				A6CB90DA25FE9AA300611B46 /* Sources */,
+				A6CB90D725FE9A6400611B46 /* Resources */,
+			);
+			path = QuestTradeKit;
+			sourceTree = "<group>";
+		};
+		A6CB90C825FE9A1E00611B46 /* QuestTradeKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				A6CB90DB25FE9AAC00611B46 /* Sources */,
+				A6CB90D825FE9A7200611B46 /* Resources */,
+			);
+			path = QuestTradeKitTests;
+			sourceTree = "<group>";
+		};
+		A6CB90D725FE9A6400611B46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A6CB90BD25FE9A1E00611B46 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A6CB90D825FE9A7200611B46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A6CB90CB25FE9A1E00611B46 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A6CB90D925FE9A8400611B46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A6CB909925FE96CF00611B46 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A6CB90DA25FE9AA300611B46 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A6CB90BC25FE9A1E00611B46 /* QuestTradeKit.h */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A6CB90DB25FE9AAC00611B46 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A6CB90C925FE9A1E00611B46 /* QuestTradeKitTests.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -189,6 +292,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6CB909A25FE96CF00611B46 /* HTTPKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6CB90B525FE9A1E00611B46 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6CB90CC25FE9A1E00611B46 /* QuestTradeKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +319,7 @@
 			);
 			dependencies = (
 				A6CB909C25FE96CF00611B46 /* PBXTargetDependency */,
+				A6CB90CE25FE9A1E00611B46 /* PBXTargetDependency */,
 			);
 			name = TradeCenter;
 			productName = TradeCenter;
@@ -232,6 +344,43 @@
 			productReference = A6CB909625FE96CF00611B46 /* HTTPKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		A6CB90B925FE9A1E00611B46 /* QuestTradeKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6CB90D125FE9A1E00611B46 /* Build configuration list for PBXNativeTarget "QuestTradeKit" */;
+			buildPhases = (
+				A6CB90B525FE9A1E00611B46 /* Headers */,
+				A6CB90B625FE9A1E00611B46 /* Sources */,
+				A6CB90B725FE9A1E00611B46 /* Frameworks */,
+				A6CB90B825FE9A1E00611B46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuestTradeKit;
+			productName = QuestTradeKit;
+			productReference = A6CB90BA25FE9A1E00611B46 /* QuestTradeKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A6CB90C125FE9A1E00611B46 /* QuestTradeKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6CB90D425FE9A1E00611B46 /* Build configuration list for PBXNativeTarget "QuestTradeKitTests" */;
+			buildPhases = (
+				A6CB90BE25FE9A1E00611B46 /* Sources */,
+				A6CB90BF25FE9A1E00611B46 /* Frameworks */,
+				A6CB90C025FE9A1E00611B46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6CB90C525FE9A1E00611B46 /* PBXTargetDependency */,
+				A6CB90C725FE9A1E00611B46 /* PBXTargetDependency */,
+			);
+			name = QuestTradeKitTests;
+			productName = QuestTradeKitTests;
+			productReference = A6CB90C225FE9A1E00611B46 /* QuestTradeKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -248,6 +397,13 @@
 					A6CB909525FE96CF00611B46 = {
 						CreatedOnToolsVersion = 11.6;
 						LastSwiftMigration = 1160;
+					};
+					A6CB90B925FE9A1E00611B46 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					A6CB90C125FE9A1E00611B46 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = A6CB907A25FE85D700611B46;
 					};
 				};
 			};
@@ -266,6 +422,8 @@
 			targets = (
 				A6CB907A25FE85D700611B46 /* TradeCenter */,
 				A6CB909525FE96CF00611B46 /* HTTPKit */,
+				A6CB90B925FE9A1E00611B46 /* QuestTradeKit */,
+				A6CB90C125FE9A1E00611B46 /* QuestTradeKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,6 +440,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A6CB909425FE96CF00611B46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6CB90B825FE9A1E00611B46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6CB90C025FE9A1E00611B46 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,6 +485,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A6CB90B625FE9A1E00611B46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6CB90BE25FE9A1E00611B46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6CB90CA25FE9A1E00611B46 /* QuestTradeKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -320,6 +507,21 @@
 			isa = PBXTargetDependency;
 			target = A6CB909525FE96CF00611B46 /* HTTPKit */;
 			targetProxy = A6CB909B25FE96CF00611B46 /* PBXContainerItemProxy */;
+		};
+		A6CB90C525FE9A1E00611B46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6CB90B925FE9A1E00611B46 /* QuestTradeKit */;
+			targetProxy = A6CB90C425FE9A1E00611B46 /* PBXContainerItemProxy */;
+		};
+		A6CB90C725FE9A1E00611B46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6CB907A25FE85D700611B46 /* TradeCenter */;
+			targetProxy = A6CB90C625FE9A1E00611B46 /* PBXContainerItemProxy */;
+		};
+		A6CB90CE25FE9A1E00611B46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6CB90B925FE9A1E00611B46 /* QuestTradeKit */;
+			targetProxy = A6CB90CD25FE9A1E00611B46 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -458,7 +660,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 884AY45F52;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = TradeCenter/Info.plist;
+				INFOPLIST_FILE = TradeCenter/Targets/TradeCenter/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -479,7 +681,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 884AY45F52;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = TradeCenter/Info.plist;
+				INFOPLIST_FILE = TradeCenter/Targets/TradeCenter/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -502,7 +704,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = HTTPKit/Info.plist;
+				INFOPLIST_FILE = TradeCenter/Targets/HTTPKit/Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -531,7 +733,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = HTTPKit/Info.plist;
+				INFOPLIST_FILE = TradeCenter/Targets/HTTPKit/Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -544,6 +746,100 @@
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A6CB90D225FE9A1E00611B46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 884AY45F52;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TradeCenter/Targets/QuestTradeKit/Resources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Beenie.QuestTradeKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A6CB90D325FE9A1E00611B46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 884AY45F52;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TradeCenter/Targets/QuestTradeKit/Resources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Beenie.QuestTradeKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A6CB90D525FE9A1E00611B46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 884AY45F52;
+				INFOPLIST_FILE = TradeCenter/Targets/QuestTradeKitTests/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Beenie.QuestTradeKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TradeCenter.app/Contents/MacOS/TradeCenter";
+			};
+			name = Debug;
+		};
+		A6CB90D625FE9A1E00611B46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 884AY45F52;
+				INFOPLIST_FILE = TradeCenter/Targets/QuestTradeKitTests/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Beenie.QuestTradeKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TradeCenter.app/Contents/MacOS/TradeCenter";
 			};
 			name = Release;
 		};
@@ -573,6 +869,24 @@
 			buildConfigurations = (
 				A6CB90A025FE96CF00611B46 /* Debug */,
 				A6CB90A125FE96CF00611B46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6CB90D125FE9A1E00611B46 /* Build configuration list for PBXNativeTarget "QuestTradeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6CB90D225FE9A1E00611B46 /* Debug */,
+				A6CB90D325FE9A1E00611B46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6CB90D425FE9A1E00611B46 /* Build configuration list for PBXNativeTarget "QuestTradeKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6CB90D525FE9A1E00611B46 /* Debug */,
+				A6CB90D625FE9A1E00611B46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
