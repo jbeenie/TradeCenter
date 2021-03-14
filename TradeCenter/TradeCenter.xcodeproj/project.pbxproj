@@ -28,6 +28,7 @@
 		A6CB90D025FE9A1E00611B46 /* QuestTradeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB90BA25FE9A1E00611B46 /* QuestTradeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6CB90DD25FE9C9E00611B46 /* HTTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB909625FE96CF00611B46 /* HTTPKit.framework */; };
 		A6CB90DE25FE9C9E00611B46 /* HTTPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB909625FE96CF00611B46 /* HTTPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A6CB90E425FE9EED00611B46 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB90E325FE9EED00611B46 /* Result+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		A6CB90C225FE9A1E00611B46 /* QuestTradeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestTradeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CB90C925FE9A1E00611B46 /* QuestTradeKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTradeKitTests.swift; sourceTree = "<group>"; };
 		A6CB90CB25FE9A1E00611B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6CB90E325FE9EED00611B46 /* Result+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 		A6CB90A825FE988C00611B46 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A6CB90E225FE9EDF00611B46 /* Extensions */,
 				A6CB909825FE96CF00611B46 /* HTTPKit.h */,
 				A6CB90AD25FE98A500611B46 /* HttpAction.swift */,
 				A6CB90AC25FE98A500611B46 /* HttpActionHandler.swift */,
@@ -311,6 +314,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A6CB90E225FE9EDF00611B46 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A6CB90E325FE9EED00611B46 /* Result+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,6 +522,7 @@
 				A6CB90B125FE98A500611B46 /* HttpMethod.swift in Sources */,
 				A6CB90B225FE98A500611B46 /* HttpActionHandler.swift in Sources */,
 				A6CB90B425FE98A500611B46 /* HttpContentType.swift in Sources */,
+				A6CB90E425FE9EED00611B46 /* Result+Extensions.swift in Sources */,
 				A6CB90AF25FE98A500611B46 /* HttpError.swift in Sources */,
 				A6CB90B325FE98A500611B46 /* HttpAction.swift in Sources */,
 			);
