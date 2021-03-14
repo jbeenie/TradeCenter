@@ -96,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				A6CB908F25FE959800611B46 /* TODO.md */,
-				A6CB908E25FE867700611B46 /* Sources */,
+				A6CB908E25FE867700611B46 /* Targets */,
 				A6CB908225FE85DA00611B46 /* Assets.xcassets */,
 				A6CB908425FE85DA00611B46 /* Main.storyboard */,
 				A6CB908725FE85DA00611B46 /* Info.plist */,
@@ -105,13 +105,13 @@
 			path = TradeCenter;
 			sourceTree = "<group>";
 		};
-		A6CB908E25FE867700611B46 /* Sources */ = {
+		A6CB908E25FE867700611B46 /* Targets */ = {
 			isa = PBXGroup;
 			children = (
 				A6CB90A425FE96E000611B46 /* HTTPKit */,
 				A6CB90A325FE96D600611B46 /* TradeCenter */,
 			);
-			path = Sources;
+			path = Targets;
 			sourceTree = "<group>";
 		};
 		A6CB909725FE96CF00611B46 /* HTTPKit */ = {
