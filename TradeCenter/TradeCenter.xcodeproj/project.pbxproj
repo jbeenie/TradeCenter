@@ -30,6 +30,7 @@
 		A6CB90DE25FE9C9E00611B46 /* HTTPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB909625FE96CF00611B46 /* HTTPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6CB90E425FE9EED00611B46 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB90E325FE9EED00611B46 /* Result+Extensions.swift */; };
 		A6CB90E625FE9FC300611B46 /* QuestTradeHttpActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB90E525FE9FC300611B46 /* QuestTradeHttpActionHandler.swift */; };
+		A6CB90E825FEA31000611B46 /* QuestTradeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB90E725FEA31000611B46 /* QuestTradeAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		A6CB90CB25FE9A1E00611B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6CB90E325FE9EED00611B46 /* Result+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
 		A6CB90E525FE9FC300611B46 /* QuestTradeHttpActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestTradeHttpActionHandler.swift; sourceTree = "<group>"; };
+		A6CB90E725FEA31000611B46 /* QuestTradeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTradeAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,8 +300,11 @@
 		A6CB90DA25FE9AA300611B46 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A6CB90E525FE9FC300611B46 /* QuestTradeHttpActionHandler.swift */,
 				A6CB90BC25FE9A1E00611B46 /* QuestTradeKit.h */,
+				A6CB90E725FEA31000611B46 /* QuestTradeAPI.swift */,
+				A6CB90E525FE9FC300611B46 /* QuestTradeHttpActionHandler.swift */,
+				A6CB90E925FEA39100611B46 /* Actions */,
+				A6CB90EA25FEA39700611B46 /* Errors */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -325,6 +330,20 @@
 				A6CB90E325FE9EED00611B46 /* Result+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A6CB90E925FEA39100611B46 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		A6CB90EA25FEA39700611B46 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,6 +555,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6CB90E825FEA31000611B46 /* QuestTradeAPI.swift in Sources */,
 				A6CB90E625FE9FC300611B46 /* QuestTradeHttpActionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
