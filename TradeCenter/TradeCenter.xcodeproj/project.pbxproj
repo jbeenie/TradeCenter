@@ -26,6 +26,8 @@
 		A6CB90CC25FE9A1E00611B46 /* QuestTradeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A6CB90BC25FE9A1E00611B46 /* QuestTradeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6CB90CF25FE9A1E00611B46 /* QuestTradeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB90BA25FE9A1E00611B46 /* QuestTradeKit.framework */; };
 		A6CB90D025FE9A1E00611B46 /* QuestTradeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB90BA25FE9A1E00611B46 /* QuestTradeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A6CB90DD25FE9C9E00611B46 /* HTTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB909625FE96CF00611B46 /* HTTPKit.framework */; };
+		A6CB90DE25FE9C9E00611B46 /* HTTPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB909625FE96CF00611B46 /* HTTPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,13 @@
 			remoteGlobalIDString = A6CB90B925FE9A1E00611B46;
 			remoteInfo = QuestTradeKit;
 		};
+		A6CB90DF25FE9C9E00611B46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6CB907325FE85D700611B46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6CB909525FE96CF00611B46;
+			remoteInfo = HTTPKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +77,17 @@
 			files = (
 				A6CB909E25FE96CF00611B46 /* HTTPKit.framework in Embed Frameworks */,
 				A6CB90D025FE9A1E00611B46 /* QuestTradeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6CB90E125FE9C9E00611B46 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A6CB90DE25FE9C9E00611B46 /* HTTPKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6CB90DD25FE9C9E00611B46 /* HTTPKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +161,7 @@
 			children = (
 				A6CB907D25FE85D700611B46 /* TradeCenter */,
 				A6CB907C25FE85D700611B46 /* Products */,
+				A6CB90DC25FE9C9E00611B46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -284,6 +306,13 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		A6CB90DC25FE9C9E00611B46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -352,10 +381,12 @@
 				A6CB90B625FE9A1E00611B46 /* Sources */,
 				A6CB90B725FE9A1E00611B46 /* Frameworks */,
 				A6CB90B825FE9A1E00611B46 /* Resources */,
+				A6CB90E125FE9C9E00611B46 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A6CB90E025FE9C9E00611B46 /* PBXTargetDependency */,
 			);
 			name = QuestTradeKit;
 			productName = QuestTradeKit;
@@ -522,6 +553,11 @@
 			isa = PBXTargetDependency;
 			target = A6CB90B925FE9A1E00611B46 /* QuestTradeKit */;
 			targetProxy = A6CB90CD25FE9A1E00611B46 /* PBXContainerItemProxy */;
+		};
+		A6CB90E025FE9C9E00611B46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6CB909525FE96CF00611B46 /* HTTPKit */;
+			targetProxy = A6CB90DF25FE9C9E00611B46 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
