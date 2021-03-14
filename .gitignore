@@ -1,0 +1,30 @@
+# Mac OS X
+*.DS_Store
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+xcuserdata/
+
+# Fastlane
+# fastlane/report.xml
+# fastlane/Preview.html
+# fastlane/screenshots
+# fastlane/test_output
+# fastlane/README.md
+# fastlane/.env
+
+# Swift Package Manager
+/.build
+/Packages
+/.swiftpm
+*/xcshareddata/swiftpm/Package.resolved
+
+#Cocoapods
+Pods/
+
+#Jekyll
+# Help/.jekyll-cache/
