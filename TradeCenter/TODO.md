@@ -6,5 +6,5 @@
         
 
     b. Create QuestTradeKit framework for making REST API calls to Quest trade
-        - Quest Trade API Object
-        - Unit test?
+        - Store Access token within QuestTrade API object ( get it using the GetAccesTokenAction)
+        - implement unit test to test getting access token
