@@ -98,7 +98,6 @@
 				A6CB908F25FE959800611B46 /* TODO.md */,
 				A6CB908E25FE867700611B46 /* Targets */,
 				A6CB908225FE85DA00611B46 /* Assets.xcassets */,
-				A6CB908425FE85DA00611B46 /* Main.storyboard */,
 				A6CB908725FE85DA00611B46 /* Info.plist */,
 				A6CB908825FE85DA00611B46 /* TradeCenter.entitlements */,
 			);
@@ -126,8 +125,8 @@
 		A6CB90A325FE96D600611B46 /* TradeCenter */ = {
 			isa = PBXGroup;
 			children = (
-				A6CB907E25FE85D700611B46 /* AppDelegate.swift */,
-				A6CB908025FE85D700611B46 /* ViewController.swift */,
+				A6CB90A725FE982900611B46 /* Resources */,
+				A6CB90A625FE981F00611B46 /* Sources */,
 			);
 			path = TradeCenter;
 			sourceTree = "<group>";
@@ -137,6 +136,23 @@
 			children = (
 			);
 			path = HTTPKit;
+			sourceTree = "<group>";
+		};
+		A6CB90A625FE981F00611B46 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A6CB907E25FE85D700611B46 /* AppDelegate.swift */,
+				A6CB908025FE85D700611B46 /* ViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A6CB90A725FE982900611B46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A6CB908425FE85DA00611B46 /* Main.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
