@@ -53,14 +53,22 @@
 		A6CB907D25FE85D700611B46 /* TradeCenter */ = {
 			isa = PBXGroup;
 			children = (
-				A6CB907E25FE85D700611B46 /* AppDelegate.swift */,
-				A6CB908025FE85D700611B46 /* ViewController.swift */,
+				A6CB908E25FE867700611B46 /* Sources */,
 				A6CB908225FE85DA00611B46 /* Assets.xcassets */,
 				A6CB908425FE85DA00611B46 /* Main.storyboard */,
 				A6CB908725FE85DA00611B46 /* Info.plist */,
 				A6CB908825FE85DA00611B46 /* TradeCenter.entitlements */,
 			);
 			path = TradeCenter;
+			sourceTree = "<group>";
+		};
+		A6CB908E25FE867700611B46 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A6CB907E25FE85D700611B46 /* AppDelegate.swift */,
+				A6CB908025FE85D700611B46 /* ViewController.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
