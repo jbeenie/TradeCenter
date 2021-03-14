@@ -20,7 +20,7 @@ public protocol HttpAction {
     func error(from data: Data) -> Error?
 }
 
-extension HttpAction where Self.Response: Decodable {
+public extension HttpAction where Self.Response: Decodable {
 
     func response(from data: Data) -> Response? {
         switch contentType {
@@ -34,7 +34,7 @@ extension HttpAction where Self.Response: Decodable {
     }
 }
 
-extension HttpAction {
+public extension HttpAction {
 
     var headers: [HttpHeader] {
         return []
