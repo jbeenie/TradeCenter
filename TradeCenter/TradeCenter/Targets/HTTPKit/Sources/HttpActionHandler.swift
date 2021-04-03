@@ -22,8 +22,8 @@ open class HttpActionHandler {
     public func run<T: HttpAction>(action: T,
                             completionQueue: DispatchQueue = .main,
                             completion: @escaping (T.ResultType) -> Void) {
-        process(action: action, completionQueue: completionQueue) { [weak self] result in
-            self?.log(result: result, for: action)
+        process(action: action, completionQueue: completionQueue) { [weak self] result, response in
+            self?.log(result: result, response: response, for: action)
             completion(result)
         }
     }
@@ -33,29 +33,31 @@ open class HttpActionHandler {
     /// Processes the given action and allows the action to decode a response from the data
     private func process<T: HttpAction>(action: T,
                                         completionQueue: DispatchQueue,
-                                        completion: @escaping (T.ResultType) -> Void) {
+                                        completion: @escaping (T.ResultType, HTTPURLResponse?) -> Void) {
         let request: URLRequest
 
         do {
             request = try urlRequest(for: action)
         } catch let error {
-            completion(.failure(error))
+            completion(.failure(error), nil)
             return
         }
 
-        URLSession.shared.dataTask(with: request) { (data, _, _) in
+        URLSession.shared.dataTask(with: request) { (data, urlResponse, error) in
             completionQueue.async {
+                let httpURLResponse = urlResponse as? HTTPURLResponse
+
                 guard let data = data else {
-                    completion(.failure(HttpError.invalidResponse))
+                    completion(.failure(HttpError.invalidResponse), httpURLResponse)
                     return
                 }
 
                 if let response = action.response(from: data) {
-                    completion(.success(response))
+                    completion(.success(response), httpURLResponse)
                 } else if let error = action.error(from: data) {
-                    completion(.failure(error))
+                    completion(.failure(error), httpURLResponse)
                 } else {
-                    completion(.failure(HttpError.responseDecoding))
+                    completion(.failure(HttpError.responseDecoding), httpURLResponse)
                 }
             }
         }.resume()
@@ -84,12 +86,21 @@ open class HttpActionHandler {
     }
 
     private func log<T: HttpAction>(result: T.ResultType,
+                                    response: HTTPURLResponse?,
                                     for action: T) {
+        guard let response = response,
+            let url = response.url else {
+            print("Error: No URL response received.")
+            return
+        }
+
+        let statusCode = response.statusCode
+
         switch result {
         case .success:
-            print("HTTP Success: (\(baseUrl.appendingPathComponent(action.path))")
+            print("HTTP Success: (\(url), Status Code: \(statusCode)")
         case .failure(let error):
-            print("HTTP Error: (\(baseUrl.appendingPathComponent(action.path)): \(error.localizedDescription)")
+            print("HTTP Error: (\(url), Error: \(error.localizedDescription), Status Code: \(statusCode)")
         }
     }
 }
