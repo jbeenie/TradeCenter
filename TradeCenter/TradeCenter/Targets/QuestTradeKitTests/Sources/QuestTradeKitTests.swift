@@ -22,6 +22,8 @@ class QuestTradeKitTests: XCTestCase {
     }
 
     func testGetAccessToken() throws {
-        questTradeAPI.getAccessToken(completion: {_ in })
+
+
+        
     }
 }
