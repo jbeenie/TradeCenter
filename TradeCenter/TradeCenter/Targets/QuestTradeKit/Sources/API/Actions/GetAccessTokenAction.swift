@@ -12,10 +12,9 @@ import HTTPKit
 public typealias GetAccessTokenResult = Result<GetAccessTokenResponse, Error>
 
 public struct GetAccessTokenResponse: Decodable {
-    public let authenticated: Bool
     public let access_token: String
     public let api_server: String
-    public let expires_in: String
+    public let expires_in: Int
     public let refresh_token: String
     public let token_type: String
 }
