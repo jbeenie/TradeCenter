@@ -16,7 +16,16 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         QTSessionManager.shared.startNewSession { [weak self] in
-            self?.currentSession = $0 }
+            self?.currentSession = $0
+            self?.currentSession?.getAccounts { result in
+                switch result {
+                case .success(let response):
+                    break
+                case .failure(let errror):
+                    break
+                }
+            }
+        }
     }
 
     override var representedObject: Any? {

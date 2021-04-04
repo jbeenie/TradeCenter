@@ -7,14 +7,13 @@
 //
 
 import Foundation
-import QuestTradeKit
 
-class QTSession {
+public class QTSession {
     private let accessToken: String
     private let tokenType: String
     private let api: QuestTradeAPIInterface
 
-    init?(accessToken: String, baseURLString: String, tokenType: String) {
+    public init?(accessToken: String, baseURLString: String, tokenType: String) {
         guard let api = QuestTradeAPI(baseURLString: baseURLString) else {
             return nil
         }
@@ -22,5 +21,9 @@ class QTSession {
         self.accessToken = accessToken
         self.tokenType = tokenType
         self.api = api
+    }
+
+    public func getAccounts(completion: @escaping (GetAcountsResult) -> Void) {
+        api.getAccounts(accessToken: accessToken, tokenType: tokenType, completion: completion)
     }
 }

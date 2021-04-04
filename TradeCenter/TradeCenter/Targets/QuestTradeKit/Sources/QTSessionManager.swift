@@ -9,17 +9,17 @@
 import Foundation
 import QuestTradeKit
 
-class QTSessionManager {
+public class QTSessionManager {
     /// Token Generated from quest trade which is used to refresh the access Token.
     private var refreshToken = "Qo4jtHGXglqEeNQtljEBzSPJBibZZ4QE0"
 
     private var session: QTSession?
 
-    static let shared: QTSessionManager = QTSessionManager()
+    public static let shared: QTSessionManager = QTSessionManager()
 
     private init() {}
 
-    func startNewSession(completion: @escaping (QTSession?) -> Void) {
+    public func startNewSession(completion: @escaping (QTSession?) -> Void) {
         QuestTradeAPI.getAccessToken(refreshToken: refreshToken) { [weak self] result in
             self?.handle(result: result, completion: completion)
         }

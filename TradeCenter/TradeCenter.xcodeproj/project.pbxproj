@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A6C628BE26192E4D00FFE179 /* QTSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628BD26192E4D00FFE179 /* QTSession.swift */; };
-		A6C628C026192E9500FFE179 /* QTSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628BF26192E9500FFE179 /* QTSessionManager.swift */; };
 		A6C628C2261935D600FFE179 /* GetAccountsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628C1261935D600FFE179 /* GetAccountsAction.swift */; };
 		A6C628C5261937EC00FFE179 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628C4261937EC00FFE179 /* Account.swift */; };
+		A6C628C626193E0400FFE179 /* QTSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628BF26192E9500FFE179 /* QTSessionManager.swift */; };
+		A6C628C726193E0400FFE179 /* QTSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628BD26192E4D00FFE179 /* QTSession.swift */; };
 		A6CB907F25FE85D700611B46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB907E25FE85D700611B46 /* AppDelegate.swift */; };
 		A6CB908125FE85D700611B46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB908025FE85D700611B46 /* ViewController.swift */; };
 		A6CB908325FE85DA00611B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6CB908225FE85DA00611B46 /* Assets.xcassets */; };
@@ -245,8 +245,6 @@
 			children = (
 				A6CB907E25FE85D700611B46 /* AppDelegate.swift */,
 				A6CB908025FE85D700611B46 /* ViewController.swift */,
-				A6C628BD26192E4D00FFE179 /* QTSession.swift */,
-				A6C628BF26192E9500FFE179 /* QTSessionManager.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -320,6 +318,8 @@
 		A6CB90DA25FE9AA300611B46 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A6C628BD26192E4D00FFE179 /* QTSession.swift */,
+				A6C628BF26192E9500FFE179 /* QTSessionManager.swift */,
 				A6CB90BC25FE9A1E00611B46 /* QuestTradeKit.h */,
 				A6CB90F025FEAED800611B46 /* API */,
 			);
@@ -571,8 +571,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6C628BE26192E4D00FFE179 /* QTSession.swift in Sources */,
-				A6C628C026192E9500FFE179 /* QTSessionManager.swift in Sources */,
 				A6CB908125FE85D700611B46 /* ViewController.swift in Sources */,
 				A6CB907F25FE85D700611B46 /* AppDelegate.swift in Sources */,
 			);
@@ -601,6 +599,8 @@
 				A6C628C2261935D600FFE179 /* GetAccountsAction.swift in Sources */,
 				A6CB90EF25FEA89F00611B46 /* GetAccessTokenAction.swift in Sources */,
 				A6C628C5261937EC00FFE179 /* Account.swift in Sources */,
+				A6C628C626193E0400FFE179 /* QTSessionManager.swift in Sources */,
+				A6C628C726193E0400FFE179 /* QTSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
