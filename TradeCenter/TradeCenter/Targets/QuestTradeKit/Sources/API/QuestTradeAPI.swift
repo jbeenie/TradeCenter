@@ -10,26 +10,36 @@ import Foundation
 import HTTPKit
 
 public protocol QuestTradeAPIInterface {
-    func getAccessToken(completion: @escaping (GetAccessTokenResult) -> Void)
+    static func getAccessToken(refreshToken: String, completion: @escaping (GetAccessTokenResult) -> Void)
+    func getAccounts(accessToken: String, tokenType: String, completion: @escaping (GetAcountsResult) -> Void)
 }
 
 public final class QuestTradeAPI: QuestTradeAPIInterface {
-    public func getAccessToken(completion: @escaping (GetAccessTokenResult) -> Void) {
+    public static func getAccessToken(refreshToken: String,
+                               completion: @escaping (GetAccessTokenResult) -> Void) {
         let action = GetAccessTokenAction(refreshToken: refreshToken)
         authenticationActionHandler.run(action: action, completion: completion)
     }
 
-    private let actionHandler = QuestTradeHttpActionHandler()
-    private let authenticationActionHandler = QuestTradeAuthenticationHttpActionHandler()
+    public func getAccounts(accessToken: String,
+                            tokenType: String,
+                            completion: @escaping (GetAcountsResult) -> Void) {
+        let action = GetAcountsAction(accessToken: accessToken, tokenType: tokenType)
+        actionHandler.run(action: action, completion: completion)
+    }
 
-    /// Token Generated from quest trade which is used to refresh the access Token.
-    private let refreshToken = "ar4rYqij57-zU2hCfCaz3Hi3ygFQy63z0"
+    private let actionHandler: HttpActionHandler
+    private static let authenticationActionHandler = QuestTradeAuthenticationHttpActionHandler()
 
     // MARK: - Initializer
 
-    private init() {}
+    public init?(baseURLString: String) {
+        guard let baseURL = URL(string: baseURLString) else {
+            return nil
+        }
 
-    public static let instance: QuestTradeAPIInterface = QuestTradeAPI()
+        self.actionHandler = HttpActionHandler(baseUrl: baseURL)
+    }
 
     // MARK: - Interface
 }

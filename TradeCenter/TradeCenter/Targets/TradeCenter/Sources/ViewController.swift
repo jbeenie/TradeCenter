@@ -7,13 +7,16 @@
 //
 
 import Cocoa
+import QuestTradeKit
 
 class ViewController: NSViewController {
+    var currentSession: QTSession?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        QTSessionManager.shared.startNewSession { [weak self] in
+            self?.currentSession = $0 }
     }
 
     override var representedObject: Any? {
@@ -21,7 +24,5 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
 }
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6C628BE26192E4D00FFE179 /* QTSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628BD26192E4D00FFE179 /* QTSession.swift */; };
+		A6C628C026192E9500FFE179 /* QTSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628BF26192E9500FFE179 /* QTSessionManager.swift */; };
+		A6C628C2261935D600FFE179 /* GetAccountsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628C1261935D600FFE179 /* GetAccountsAction.swift */; };
+		A6C628C5261937EC00FFE179 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628C4261937EC00FFE179 /* Account.swift */; };
 		A6CB907F25FE85D700611B46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB907E25FE85D700611B46 /* AppDelegate.swift */; };
 		A6CB908125FE85D700611B46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB908025FE85D700611B46 /* ViewController.swift */; };
 		A6CB908325FE85DA00611B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6CB908225FE85DA00611B46 /* Assets.xcassets */; };
@@ -29,7 +33,6 @@
 		A6CB90DD25FE9C9E00611B46 /* HTTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB909625FE96CF00611B46 /* HTTPKit.framework */; };
 		A6CB90DE25FE9C9E00611B46 /* HTTPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB909625FE96CF00611B46 /* HTTPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6CB90E425FE9EED00611B46 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB90E325FE9EED00611B46 /* Result+Extensions.swift */; };
-		A6CB90E625FE9FC300611B46 /* QuestTradeHttpActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB90E525FE9FC300611B46 /* QuestTradeHttpActionHandler.swift */; };
 		A6CB90E825FEA31000611B46 /* QuestTradeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB90E725FEA31000611B46 /* QuestTradeAPI.swift */; };
 		A6CB90EC25FEA66D00611B46 /* QuestTradeAuthenticationHttpActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB90EB25FEA66D00611B46 /* QuestTradeAuthenticationHttpActionHandler.swift */; };
 		A6CB90EF25FEA89F00611B46 /* GetAccessTokenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB90EE25FEA89F00611B46 /* GetAccessTokenAction.swift */; };
@@ -100,6 +103,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A6C628BD26192E4D00FFE179 /* QTSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTSession.swift; sourceTree = "<group>"; };
+		A6C628BF26192E9500FFE179 /* QTSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTSessionManager.swift; sourceTree = "<group>"; };
+		A6C628C1261935D600FFE179 /* GetAccountsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountsAction.swift; sourceTree = "<group>"; };
+		A6C628C4261937EC00FFE179 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		A6CB907B25FE85D700611B46 /* TradeCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CB907E25FE85D700611B46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6CB908025FE85D700611B46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,7 +131,6 @@
 		A6CB90C925FE9A1E00611B46 /* QuestTradeKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTradeKitTests.swift; sourceTree = "<group>"; };
 		A6CB90CB25FE9A1E00611B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6CB90E325FE9EED00611B46 /* Result+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
-		A6CB90E525FE9FC300611B46 /* QuestTradeHttpActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestTradeHttpActionHandler.swift; sourceTree = "<group>"; };
 		A6CB90E725FEA31000611B46 /* QuestTradeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTradeAPI.swift; sourceTree = "<group>"; };
 		A6CB90EB25FEA66D00611B46 /* QuestTradeAuthenticationHttpActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTradeAuthenticationHttpActionHandler.swift; sourceTree = "<group>"; };
 		A6CB90EE25FEA89F00611B46 /* GetAccessTokenAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccessTokenAction.swift; sourceTree = "<group>"; };
@@ -166,6 +172,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6C628C3261937DB00FFE179 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A6C628C4261937EC00FFE179 /* Account.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A6CB907225FE85D700611B46 = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +245,8 @@
 			children = (
 				A6CB907E25FE85D700611B46 /* AppDelegate.swift */,
 				A6CB908025FE85D700611B46 /* ViewController.swift */,
+				A6C628BD26192E4D00FFE179 /* QTSession.swift */,
+				A6C628BF26192E9500FFE179 /* QTSessionManager.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -337,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				A6CB90EE25FEA89F00611B46 /* GetAccessTokenAction.swift */,
+				A6C628C1261935D600FFE179 /* GetAccountsAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -352,7 +369,6 @@
 			isa = PBXGroup;
 			children = (
 				A6CB90EB25FEA66D00611B46 /* QuestTradeAuthenticationHttpActionHandler.swift */,
-				A6CB90E525FE9FC300611B46 /* QuestTradeHttpActionHandler.swift */,
 			);
 			path = ActionHandlers;
 			sourceTree = "<group>";
@@ -360,6 +376,7 @@
 		A6CB90F025FEAED800611B46 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A6C628C3261937DB00FFE179 /* Model */,
 				A6CB90E725FEA31000611B46 /* QuestTradeAPI.swift */,
 				A6CB90ED25FEA68000611B46 /* ActionHandlers */,
 				A6CB90E925FEA39100611B46 /* Actions */,
@@ -554,6 +571,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6C628BE26192E4D00FFE179 /* QTSession.swift in Sources */,
+				A6C628C026192E9500FFE179 /* QTSessionManager.swift in Sources */,
 				A6CB908125FE85D700611B46 /* ViewController.swift in Sources */,
 				A6CB907F25FE85D700611B46 /* AppDelegate.swift in Sources */,
 			);
@@ -579,8 +598,9 @@
 			files = (
 				A6CB90EC25FEA66D00611B46 /* QuestTradeAuthenticationHttpActionHandler.swift in Sources */,
 				A6CB90E825FEA31000611B46 /* QuestTradeAPI.swift in Sources */,
+				A6C628C2261935D600FFE179 /* GetAccountsAction.swift in Sources */,
 				A6CB90EF25FEA89F00611B46 /* GetAccessTokenAction.swift in Sources */,
-				A6CB90E625FE9FC300611B46 /* QuestTradeHttpActionHandler.swift in Sources */,
+				A6C628C5261937EC00FFE179 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
