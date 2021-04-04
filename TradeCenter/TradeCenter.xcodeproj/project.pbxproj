@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		A6C628C2261935D600FFE179 /* GetAccountsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628C1261935D600FFE179 /* GetAccountsAction.swift */; };
 		A6C628C5261937EC00FFE179 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628C4261937EC00FFE179 /* Account.swift */; };
-		A6C628C626193E0400FFE179 /* QTSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628BF26192E9500FFE179 /* QTSessionManager.swift */; };
-		A6C628C726193E0400FFE179 /* QTSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628BD26192E4D00FFE179 /* QTSession.swift */; };
+		A6C628C626193E0400FFE179 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628BF26192E9500FFE179 /* SessionManager.swift */; };
+		A6C628C726193E0400FFE179 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628BD26192E4D00FFE179 /* Session.swift */; };
 		A6CB907F25FE85D700611B46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB907E25FE85D700611B46 /* AppDelegate.swift */; };
 		A6CB908125FE85D700611B46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB908025FE85D700611B46 /* ViewController.swift */; };
 		A6CB908325FE85DA00611B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6CB908225FE85DA00611B46 /* Assets.xcassets */; };
@@ -103,8 +103,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A6C628BD26192E4D00FFE179 /* QTSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTSession.swift; sourceTree = "<group>"; };
-		A6C628BF26192E9500FFE179 /* QTSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTSessionManager.swift; sourceTree = "<group>"; };
+		A6C628BD26192E4D00FFE179 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		A6C628BF26192E9500FFE179 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		A6C628C1261935D600FFE179 /* GetAccountsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountsAction.swift; sourceTree = "<group>"; };
 		A6C628C4261937EC00FFE179 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		A6CB907B25FE85D700611B46 /* TradeCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -318,8 +318,8 @@
 		A6CB90DA25FE9AA300611B46 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A6C628BD26192E4D00FFE179 /* QTSession.swift */,
-				A6C628BF26192E9500FFE179 /* QTSessionManager.swift */,
+				A6C628BD26192E4D00FFE179 /* Session.swift */,
+				A6C628BF26192E9500FFE179 /* SessionManager.swift */,
 				A6CB90BC25FE9A1E00611B46 /* QuestTradeKit.h */,
 				A6CB90F025FEAED800611B46 /* API */,
 			);
@@ -599,8 +599,8 @@
 				A6C628C2261935D600FFE179 /* GetAccountsAction.swift in Sources */,
 				A6CB90EF25FEA89F00611B46 /* GetAccessTokenAction.swift in Sources */,
 				A6C628C5261937EC00FFE179 /* Account.swift in Sources */,
-				A6C628C626193E0400FFE179 /* QTSessionManager.swift in Sources */,
-				A6C628C726193E0400FFE179 /* QTSession.swift in Sources */,
+				A6C628C626193E0400FFE179 /* SessionManager.swift in Sources */,
+				A6C628C726193E0400FFE179 /* Session.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

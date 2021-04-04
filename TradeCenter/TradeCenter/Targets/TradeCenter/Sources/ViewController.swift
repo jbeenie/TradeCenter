@@ -10,12 +10,12 @@ import Cocoa
 import QuestTradeKit
 
 class ViewController: NSViewController {
-    var currentSession: QTSession?
+    var currentSession: Session?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        QTSessionManager.shared.startNewSession { [weak self] in
+        SessionManager.shared.startNewSession { [weak self] in
             self?.currentSession = $0
             self?.currentSession?.getAccounts { result in
                 switch result {

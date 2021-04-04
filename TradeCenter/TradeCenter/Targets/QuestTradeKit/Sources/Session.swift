@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class QTSession {
+public class Session {
     private let accessToken: String
     private let tokenType: String
     private let api: QuestTradeAPIInterface
