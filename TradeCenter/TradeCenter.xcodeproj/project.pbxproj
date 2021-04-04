@@ -12,6 +12,9 @@
 		A6C628C626193E0400FFE179 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628BF26192E9500FFE179 /* SessionManager.swift */; };
 		A6C628C726193E0400FFE179 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628BD26192E4D00FFE179 /* Session.swift */; };
 		A6C628C926197F3A00FFE179 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628C826197F3A00FFE179 /* Storage.swift */; };
+		A6C628CB261987B300FFE179 /* GetAccountExecutions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628CA261987B300FFE179 /* GetAccountExecutions.swift */; };
+		A6C628CD2619893700FFE179 /* AccountAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628CC2619893700FFE179 /* AccountAction.swift */; };
+		A6C628D02619908000FFE179 /* Execution.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628CE26198F5A00FFE179 /* Execution.swift */; };
 		A6CB907F25FE85D700611B46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB907E25FE85D700611B46 /* AppDelegate.swift */; };
 		A6CB908125FE85D700611B46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB908025FE85D700611B46 /* ViewController.swift */; };
 		A6CB908325FE85DA00611B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6CB908225FE85DA00611B46 /* Assets.xcassets */; };
@@ -109,6 +112,9 @@
 		A6C628C1261935D600FFE179 /* GetAccountsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountsAction.swift; sourceTree = "<group>"; };
 		A6C628C4261937EC00FFE179 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		A6C628C826197F3A00FFE179 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		A6C628CA261987B300FFE179 /* GetAccountExecutions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountExecutions.swift; sourceTree = "<group>"; };
+		A6C628CC2619893700FFE179 /* AccountAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAction.swift; sourceTree = "<group>"; };
+		A6C628CE26198F5A00FFE179 /* Execution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Execution.swift; sourceTree = "<group>"; };
 		A6CB907B25FE85D700611B46 /* TradeCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CB907E25FE85D700611B46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6CB908025FE85D700611B46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				A6C628C4261937EC00FFE179 /* Account.swift */,
+				A6C628CE26198F5A00FFE179 /* Execution.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -356,7 +363,9 @@
 			isa = PBXGroup;
 			children = (
 				A6CB90EE25FEA89F00611B46 /* GetAccessTokenAction.swift */,
+				A6C628CA261987B300FFE179 /* GetAccountExecutions.swift */,
 				A6C628C1261935D600FFE179 /* GetAccountsAction.swift */,
+				A6C628CC2619893700FFE179 /* AccountAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -598,10 +607,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6C628CB261987B300FFE179 /* GetAccountExecutions.swift in Sources */,
 				A6CB90EC25FEA66D00611B46 /* QuestTradeAuthenticationHttpActionHandler.swift in Sources */,
 				A6CB90E825FEA31000611B46 /* QuestTradeAPI.swift in Sources */,
 				A6C628C2261935D600FFE179 /* GetAccountsAction.swift in Sources */,
+				A6C628CD2619893700FFE179 /* AccountAction.swift in Sources */,
 				A6CB90EF25FEA89F00611B46 /* GetAccessTokenAction.swift in Sources */,
+				A6C628D02619908000FFE179 /* Execution.swift in Sources */,
 				A6C628C5261937EC00FFE179 /* Account.swift in Sources */,
 				A6C628C626193E0400FFE179 /* SessionManager.swift in Sources */,
 				A6C628C726193E0400FFE179 /* Session.swift in Sources */,

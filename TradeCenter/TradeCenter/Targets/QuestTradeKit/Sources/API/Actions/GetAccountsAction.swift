@@ -16,7 +16,7 @@ public struct GetAcountsResponse: Decodable {
     public let userId: Int
 }
 
-struct GetAcountsAction: HttpAction {
+struct GetAcountsAction: AccountAction {
 
     typealias Response = GetAcountsResponse
 
@@ -24,8 +24,4 @@ struct GetAcountsAction: HttpAction {
     let method: HttpMethod = .get
     let accessToken: String
     let tokenType: String
-
-    var headers: [HttpHeader] {
-        return [(key: "Authorization", value: "\(tokenType) \(accessToken)")]
-    }
 }

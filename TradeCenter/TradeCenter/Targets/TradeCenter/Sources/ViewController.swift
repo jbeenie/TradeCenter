@@ -16,7 +16,7 @@ class ViewController: NSViewController {
     
     var sessionManager: SessionManager?
 
-    let manuallyGeneratedRefreshToken = "GSIBl7RWINwOv_TzK9CzwxU5os9KC71K0"
+    let manuallyGeneratedRefreshToken = "pgEhbTLVKaVvtP1HjHu_Y0j1IJ9o-S-r0"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +39,33 @@ class ViewController: NSViewController {
     }
 
     private func sesstionDidStart(session: Session) {
-        session.getAccounts { result in
+        session.getAccounts { [weak self] result in
             switch result {
             case .success(let response):
+                self?.didGet(accounts: response.accounts)
+            case .failure(let error):
+                print(error)
                 break
-            case .failure(let errror):
-                break
+            }
+        }
+    }
+
+    private func didGet(accounts: [Account]) {
+        let startTime = "2021-01-01T00:00:00+00:00"
+        let endTime = "2021-03-22T00:00:00+00:00"
+
+        for account in accounts {
+            currentSession?.getAccountExecutions(accountNumber: account.number, startTime: startTime, endTime: endTime) { result in
+                switch result {
+                case .success(let response):
+                    print("execution count: \(response.executions.count)")
+                    for execution in response.executions {
+                        print("account: \(account.number) -  execution: \(execution.symbol)")
+                    }
+                case .failure(let error):
+                    print(error)
+                    break
+                }
             }
         }
     }

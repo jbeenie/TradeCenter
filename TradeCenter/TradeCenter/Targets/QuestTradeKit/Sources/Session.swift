@@ -26,4 +26,16 @@ public class Session {
     public func getAccounts(completion: @escaping (GetAcountsResult) -> Void) {
         api.getAccounts(accessToken: accessToken, tokenType: tokenType, completion: completion)
     }
+
+    public func getAccountExecutions(accountNumber: String,
+                                     startTime: String,
+                                     endTime: String,
+                                     completion: @escaping (GetAcountExecutionsResult) -> Void) {
+        api.getAccountExecutions(accountNumber: accountNumber,
+                                 startTime: startTime,
+                                 endTime: endTime,
+                                 accessToken: accessToken,
+                                 tokenType: tokenType,
+                                 completion: completion)
+    }
 }

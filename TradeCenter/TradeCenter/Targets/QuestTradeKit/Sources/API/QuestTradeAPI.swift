@@ -12,6 +12,7 @@ import HTTPKit
 public protocol QuestTradeAPIInterface {
     static func getAccessToken(refreshToken: String, completion: @escaping (GetAccessTokenResult) -> Void)
     func getAccounts(accessToken: String, tokenType: String, completion: @escaping (GetAcountsResult) -> Void)
+    func getAccountExecutions(accountNumber: String, startTime: String, endTime: String, accessToken: String, tokenType: String, completion: @escaping (GetAcountExecutionsResult) -> Void)
 }
 
 public final class QuestTradeAPI: QuestTradeAPIInterface {
@@ -27,6 +28,17 @@ public final class QuestTradeAPI: QuestTradeAPIInterface {
         let action = GetAcountsAction(accessToken: accessToken, tokenType: tokenType)
         actionHandler.run(action: action, completion: completion)
     }
+    
+    public func getAccountExecutions(accountNumber: String,
+                                     startTime: String,
+                                     endTime: String,
+                                     accessToken: String,
+                                     tokenType: String,
+                                     completion: @escaping (GetAcountExecutionsResult) -> Void) {
+        let action = GetAcountExecutionsAction(accountNumber: accountNumber, startTime: startTime, endTime: endTime, accessToken: accessToken, tokenType: tokenType)
+        actionHandler.run(action: action, completion: completion)
+    }
+
 
     private let actionHandler: HttpActionHandler
     private static let authenticationActionHandler = QuestTradeAuthenticationHttpActionHandler()
@@ -40,6 +52,4 @@ public final class QuestTradeAPI: QuestTradeAPIInterface {
 
         self.actionHandler = HttpActionHandler(baseUrl: baseURL)
     }
-
-    // MARK: - Interface
 }
