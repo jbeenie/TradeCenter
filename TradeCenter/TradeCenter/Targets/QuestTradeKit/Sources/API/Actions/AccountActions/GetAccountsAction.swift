@@ -1,5 +1,5 @@
 //
-//  GetAcountsAction.swift
+//  GetAccountsAction.swift
 //  QuestTradeKit
 //
 //  Created by Jeremie Benhamron on 2021-03-14.
@@ -9,16 +9,16 @@
 import Foundation
 import HTTPKit
 
-public typealias GetAcountsResult = Result<GetAcountsResponse, Error>
+public typealias GetAccountsResult = Result<GetAccountsResponse, Error>
 
-public struct GetAcountsResponse: Decodable {
+public struct GetAccountsResponse: Decodable {
     public let accounts: [Account]
     public let userId: Int
 }
 
-struct GetAcountsAction: AccountAction {
+struct GetAccountsAction: AccountAction {
 
-    typealias Response = GetAcountsResponse
+    typealias Response = GetAccountsResponse
 
     let path: String = "/v1/accounts"
     let method: HttpMethod = .get

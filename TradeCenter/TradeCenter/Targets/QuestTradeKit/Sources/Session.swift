@@ -23,15 +23,27 @@ public class Session {
         self.api = api
     }
 
-    public func getAccounts(completion: @escaping (GetAcountsResult) -> Void) {
+    public func getAccounts(completion: @escaping (GetAccountsResult) -> Void) {
         api.getAccounts(accessToken: accessToken, tokenType: tokenType, completion: completion)
     }
 
     public func getAccountExecutions(accountNumber: String,
                                      startTime: String,
                                      endTime: String,
-                                     completion: @escaping (GetAcountExecutionsResult) -> Void) {
+                                     completion: @escaping (GetAccountExecutionsResult) -> Void) {
         api.getAccountExecutions(accountNumber: accountNumber,
+                                 startTime: startTime,
+                                 endTime: endTime,
+                                 accessToken: accessToken,
+                                 tokenType: tokenType,
+                                 completion: completion)
+    }
+
+    public func getAccountActivities(accountNumber: String,
+                                     startTime: String,
+                                     endTime: String,
+                                     completion: @escaping (GetAccountActivitiesResult) -> Void) {
+        api.getAccountActivities(accountNumber: accountNumber,
                                  startTime: startTime,
                                  endTime: endTime,
                                  accessToken: accessToken,

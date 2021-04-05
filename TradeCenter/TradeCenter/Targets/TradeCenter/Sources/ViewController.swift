@@ -52,20 +52,43 @@ class ViewController: NSViewController {
 
     private func didGet(accounts: [Account]) {
         let startTime = "2021-01-01T00:00:00+00:00"
-        let endTime = "2021-03-22T00:00:00+00:00"
+        let endTime = "2021-01-22T00:00:00+00:00"
+
+//        for account in accounts {
+//            getExecutions(for: account, startTime: startTime, endTime: endTime)
+//        }
 
         for account in accounts {
-            currentSession?.getAccountExecutions(accountNumber: account.number, startTime: startTime, endTime: endTime) { result in
-                switch result {
-                case .success(let response):
-                    print("execution count: \(response.executions.count)")
-                    for execution in response.executions {
-                        print("account: \(account.number) -  execution: \(execution.symbol)")
-                    }
-                case .failure(let error):
-                    print(error)
-                    break
+            getActivities(for: account, startTime: startTime, endTime: endTime)
+        }
+    }
+
+    private func getExecutions(for account: Account, startTime: String, endTime: String) {
+        currentSession?.getAccountExecutions(accountNumber: account.number, startTime: startTime, endTime: endTime) { result in
+            switch result {
+            case .success(let response):
+                print("execution count: \(response.executions.count)")
+                for execution in response.executions {
+                    print("account: \(account.number) -  execution: \(execution.symbol)")
                 }
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }
+    }
+
+    private func getActivities(for account: Account, startTime: String, endTime: String) {
+        currentSession?.getAccountActivities(accountNumber: account.number, startTime: startTime, endTime: endTime) { result in
+            switch result {
+            case .success(let response):
+                print("activities count: \(response.activities.count)")
+                for activity in response.activities {
+                    print("account: \(account.number) -  activity: \(activity.action)")
+                }
+            case .failure(let error):
+                print(error)
+                break
             }
         }
     }

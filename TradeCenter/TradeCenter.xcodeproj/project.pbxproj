@@ -15,6 +15,8 @@
 		A6C628CB261987B300FFE179 /* GetAccountExecutions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628CA261987B300FFE179 /* GetAccountExecutions.swift */; };
 		A6C628CD2619893700FFE179 /* AccountAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628CC2619893700FFE179 /* AccountAction.swift */; };
 		A6C628D02619908000FFE179 /* Execution.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628CE26198F5A00FFE179 /* Execution.swift */; };
+		A6C628D4261A968C00FFE179 /* GetAccountActivitiesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628D3261A968C00FFE179 /* GetAccountActivitiesAction.swift */; };
+		A6C628D6261A96FE00FFE179 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628D5261A96FE00FFE179 /* Activity.swift */; };
 		A6CB907F25FE85D700611B46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB907E25FE85D700611B46 /* AppDelegate.swift */; };
 		A6CB908125FE85D700611B46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB908025FE85D700611B46 /* ViewController.swift */; };
 		A6CB908325FE85DA00611B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6CB908225FE85DA00611B46 /* Assets.xcassets */; };
@@ -115,6 +117,8 @@
 		A6C628CA261987B300FFE179 /* GetAccountExecutions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountExecutions.swift; sourceTree = "<group>"; };
 		A6C628CC2619893700FFE179 /* AccountAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAction.swift; sourceTree = "<group>"; };
 		A6C628CE26198F5A00FFE179 /* Execution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Execution.swift; sourceTree = "<group>"; };
+		A6C628D3261A968C00FFE179 /* GetAccountActivitiesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountActivitiesAction.swift; sourceTree = "<group>"; };
+		A6C628D5261A96FE00FFE179 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		A6CB907B25FE85D700611B46 /* TradeCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CB907E25FE85D700611B46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6CB908025FE85D700611B46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 			children = (
 				A6C628C4261937EC00FFE179 /* Account.swift */,
 				A6C628CE26198F5A00FFE179 /* Execution.swift */,
+				A6C628D5261A96FE00FFE179 /* Activity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 				A6C628CA261987B300FFE179 /* GetAccountExecutions.swift */,
 				A6C628C1261935D600FFE179 /* GetAccountsAction.swift */,
 				A6C628CC2619893700FFE179 /* AccountAction.swift */,
+				A6C628D3261A968C00FFE179 /* GetAccountActivitiesAction.swift */,
 			);
 			path = AccountActions;
 			sourceTree = "<group>";
@@ -628,6 +634,8 @@
 				A6CB90E825FEA31000611B46 /* QuestTradeAPI.swift in Sources */,
 				A6C628C2261935D600FFE179 /* GetAccountsAction.swift in Sources */,
 				A6C628CD2619893700FFE179 /* AccountAction.swift in Sources */,
+				A6C628D4261A968C00FFE179 /* GetAccountActivitiesAction.swift in Sources */,
+				A6C628D6261A96FE00FFE179 /* Activity.swift in Sources */,
 				A6CB90EF25FEA89F00611B46 /* GetAccessTokenAction.swift in Sources */,
 				A6C628D02619908000FFE179 /* Execution.swift in Sources */,
 				A6C628C5261937EC00FFE179 /* Account.swift in Sources */,
