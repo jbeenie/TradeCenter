@@ -16,7 +16,7 @@ class ViewController: NSViewController {
     
     var sessionManager: SessionManager?
 
-    let manuallyGeneratedRefreshToken = "pgEhbTLVKaVvtP1HjHu_Y0j1IJ9o-S-r0"
+    let manuallyGeneratedRefreshToken = "BQiLtFhylgEzu1MuF7JcEHyyWunTsa9S0"
 
     override func viewDidLoad() {
         super.viewDidLoad()

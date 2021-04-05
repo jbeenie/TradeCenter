@@ -189,6 +189,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		A6C628D1261A95BB00FFE179 /* AccountActions */ = {
+			isa = PBXGroup;
+			children = (
+				A6C628CA261987B300FFE179 /* GetAccountExecutions.swift */,
+				A6C628C1261935D600FFE179 /* GetAccountsAction.swift */,
+				A6C628CC2619893700FFE179 /* AccountAction.swift */,
+			);
+			path = AccountActions;
+			sourceTree = "<group>";
+		};
+		A6C628D2261A95C900FFE179 /* MarketActions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MarketActions;
+			sourceTree = "<group>";
+		};
 		A6CB907225FE85D700611B46 = {
 			isa = PBXGroup;
 			children = (
@@ -362,10 +379,9 @@
 		A6CB90E925FEA39100611B46 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				A6C628D2261A95C900FFE179 /* MarketActions */,
+				A6C628D1261A95BB00FFE179 /* AccountActions */,
 				A6CB90EE25FEA89F00611B46 /* GetAccessTokenAction.swift */,
-				A6C628CA261987B300FFE179 /* GetAccountExecutions.swift */,
-				A6C628C1261935D600FFE179 /* GetAccountsAction.swift */,
-				A6C628CC2619893700FFE179 /* AccountAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
