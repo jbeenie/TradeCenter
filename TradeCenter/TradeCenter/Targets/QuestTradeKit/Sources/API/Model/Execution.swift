@@ -12,7 +12,7 @@ public struct Execution: Decodable {
     public let symbol: String
     public let symbolId: Int
     public let quantity: Int
-    public let side: String
+    public let side: OrderSide
     public let price: Double
     public let id: Int
     public let orderId: Int

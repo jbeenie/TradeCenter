@@ -16,7 +16,7 @@ public struct Activity: Decodable {
     public let symbol: String
     public let symbolId: UInt64
     public let description: String
-    public let currency: String
+    public let currency: Currency
     public let quantity: Double
     public let price: Double
     public let grossAmount: Double
