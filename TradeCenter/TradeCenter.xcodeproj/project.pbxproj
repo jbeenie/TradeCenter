@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		A67511C52636613000DDDE3F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511C42636613000DDDE3F /* Order.swift */; };
 		A67511C72636663B00DDDE3F /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511C62636663B00DDDE3F /* Enumerations.swift */; };
-		A67511C92636741F00DDDE3F /* GetAccountOrdersAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511C82636741F00DDDE3F /* GetAccountOrdersAction.swift */; };
+		A67511C92636741F00DDDE3F /* GetAccountBalancesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511C82636741F00DDDE3F /* GetAccountBalancesAction.swift */; };
+		A67511CB26367FD400DDDE3F /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511CA26367FD400DDDE3F /* Balance.swift */; };
+		A67511CD2636806700DDDE3F /* GetAccountOrdersAction copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511CC2636806700DDDE3F /* GetAccountOrdersAction copy.swift */; };
 		A6C628C2261935D600FFE179 /* GetAccountsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628C1261935D600FFE179 /* GetAccountsAction.swift */; };
 		A6C628C5261937EC00FFE179 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628C4261937EC00FFE179 /* Account.swift */; };
 		A6C628C626193E0400FFE179 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628BF26192E9500FFE179 /* SessionManager.swift */; };
@@ -114,7 +116,9 @@
 /* Begin PBXFileReference section */
 		A67511C42636613000DDDE3F /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		A67511C62636663B00DDDE3F /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
-		A67511C82636741F00DDDE3F /* GetAccountOrdersAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountOrdersAction.swift; sourceTree = "<group>"; };
+		A67511C82636741F00DDDE3F /* GetAccountBalancesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountBalancesAction.swift; sourceTree = "<group>"; };
+		A67511CA26367FD400DDDE3F /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
+		A67511CC2636806700DDDE3F /* GetAccountOrdersAction copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GetAccountOrdersAction copy.swift"; sourceTree = "<group>"; };
 		A6C628BD26192E4D00FFE179 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		A6C628BF26192E9500FFE179 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		A6C628C1261935D600FFE179 /* GetAccountsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountsAction.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 				A67511C42636613000DDDE3F /* Order.swift */,
 				A6C628D5261A96FE00FFE179 /* Activity.swift */,
 				A67511C62636663B00DDDE3F /* Enumerations.swift */,
+				A67511CA26367FD400DDDE3F /* Balance.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,7 +213,8 @@
 				A6C628CC2619893700FFE179 /* AccountAction.swift */,
 				A6C628D3261A968C00FFE179 /* GetAccountActivitiesAction.swift */,
 				A6C628CA261987B300FFE179 /* GetAccountExecutionsAction.swift */,
-				A67511C82636741F00DDDE3F /* GetAccountOrdersAction.swift */,
+				A67511C82636741F00DDDE3F /* GetAccountBalancesAction.swift */,
+				A67511CC2636806700DDDE3F /* GetAccountOrdersAction copy.swift */,
 				A6C628C1261935D600FFE179 /* GetAccountsAction.swift */,
 			);
 			path = AccountActions;
@@ -638,6 +644,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A67511CD2636806700DDDE3F /* GetAccountOrdersAction copy.swift in Sources */,
 				A6C628CB261987B300FFE179 /* GetAccountExecutionsAction.swift in Sources */,
 				A6CB90EC25FEA66D00611B46 /* QuestTradeAuthenticationHttpActionHandler.swift in Sources */,
 				A6CB90E825FEA31000611B46 /* QuestTradeAPI.swift in Sources */,
@@ -652,7 +659,8 @@
 				A6C628C726193E0400FFE179 /* Session.swift in Sources */,
 				A67511C72636663B00DDDE3F /* Enumerations.swift in Sources */,
 				A67511C52636613000DDDE3F /* Order.swift in Sources */,
-				A67511C92636741F00DDDE3F /* GetAccountOrdersAction.swift in Sources */,
+				A67511CB26367FD400DDDE3F /* Balance.swift in Sources */,
+				A67511C92636741F00DDDE3F /* GetAccountBalancesAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

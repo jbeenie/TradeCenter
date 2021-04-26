@@ -15,6 +15,7 @@ public protocol QuestTradeAPIInterface {
     func getAccountExecutions(accountNumber: String, startTime: String, endTime: String, accessToken: String, tokenType: String, completion: @escaping (GetAccountExecutionsResult) -> Void)
     func getAccountActivities(accountNumber: String, startTime: String, endTime: String, accessToken: String, tokenType: String, completion: @escaping (GetAccountActivitiesResult) -> Void)
     func getAccountOrders(accountNumber: String, startTime: String, endTime: String, filter: OrderStateFilterType, accessToken: String, tokenType: String, completion: @escaping (GetAccountOrdersResult) -> Void)
+    func getAccountBalances(accountNumber: String, accessToken: String, tokenType: String, completion: @escaping (GetAccountBalancesResult) -> Void)
 }
 
 public final class QuestTradeAPI: QuestTradeAPIInterface {
@@ -55,6 +56,13 @@ public final class QuestTradeAPI: QuestTradeAPIInterface {
                                                 startTime: startTime,
                                                 endTime: endTime,
                                                 stateFilter: filter,
+                                                accessToken: accessToken,
+                                                tokenType: tokenType)
+        actionHandler.run(action: action, completion: completion)
+    }
+
+    public func getAccountBalances(accountNumber: String, accessToken: String, tokenType: String, completion: @escaping (GetAccountBalancesResult) -> Void) {
+        let action = GetAccountBalancesAction(accountNumber: accountNumber,
                                                 accessToken: accessToken,
                                                 tokenType: tokenType)
         actionHandler.run(action: action, completion: completion)

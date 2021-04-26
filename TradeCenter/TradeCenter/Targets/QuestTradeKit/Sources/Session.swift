@@ -64,4 +64,12 @@ public class Session {
                                  tokenType: tokenType,
                                  completion: completion)
     }
+
+    public func getAccountBalances(accountNumber: String,
+                                     completion: @escaping (GetAccountBalancesResult) -> Void) {
+        api.getAccountBalances(accountNumber: accountNumber,
+                                 accessToken: accessToken,
+                                 tokenType: tokenType,
+                                 completion: completion)
+    }
 }
