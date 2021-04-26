@@ -9,10 +9,10 @@
 import Foundation
 
 public struct Account: Decodable {
-    public let type: String
+    public let type: AccountType
     public let number: String
-    public let status: String
+    public let status: AccountStatus
     public let isPrimary: Bool
     public let isBilling: Bool
-    public let clientAccountType: String
+    public let clientAccountType: ClientAccountType
 }
