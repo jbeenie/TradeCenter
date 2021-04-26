@@ -72,4 +72,12 @@ public class Session {
                                  tokenType: tokenType,
                                  completion: completion)
     }
+
+    public func getAccountPositions(accountNumber: String,
+                                     completion: @escaping (GetAccountPositionsResult) -> Void) {
+        api.getAccountPositions(accountNumber: accountNumber,
+                                 accessToken: accessToken,
+                                 tokenType: tokenType,
+                                 completion: completion)
+    }
 }

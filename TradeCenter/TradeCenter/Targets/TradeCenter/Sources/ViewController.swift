@@ -67,8 +67,12 @@ class ViewController: NSViewController {
 //            getOrders(for: account, startTime: startTime, endTime: endTime, filter: .All)
 //        }
 
+//        for account in accounts {
+//            getAccountBalances(for: account)
+//        }
+
         for account in accounts {
-            getAccountBalances(for: account)
+            getAccountPositions(for: account)
         }
     }
 
@@ -127,6 +131,21 @@ class ViewController: NSViewController {
                 print("perCurrencyBalances count: \(response.perCurrencyBalances.count)")
                 for balances in response.perCurrencyBalances {
                     print("account: \(account.number) -  currency: \(balances.currency) - totalEquity: \(balances.totalEquity)")
+                }
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }
+    }
+
+    private func getAccountPositions(for account: Account) {
+        currentSession?.getAccountPositions(accountNumber: account.number) { result in
+            switch result {
+            case .success(let response):
+                print("positions count: \(response.positions.count)")
+                for positions in response.positions {
+                    print("account: \(account.number) -  symbol: \(positions.symbol) - open pnl: \(positions.openPnl)")
                 }
             case .failure(let error):
                 print(error)
