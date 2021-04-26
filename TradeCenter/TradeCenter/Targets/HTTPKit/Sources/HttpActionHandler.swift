@@ -52,13 +52,8 @@ open class HttpActionHandler {
                     return
                 }
 
-                if let response = action.response(from: data) {
-                    completion(.success(response), httpURLResponse)
-                } else if let error = action.error(from: data) {
-                    completion(.failure(error), httpURLResponse)
-                } else {
-                    completion(.failure(HttpError.responseDecoding), httpURLResponse)
-                }
+                let result = action.result(from: data)
+                completion(result, httpURLResponse)
             }
         }.resume()
     }

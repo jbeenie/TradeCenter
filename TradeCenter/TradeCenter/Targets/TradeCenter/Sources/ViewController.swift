@@ -16,12 +16,13 @@ class ViewController: NSViewController {
     
     var sessionManager: SessionManager?
 
-    let manuallyGeneratedRefreshToken = "BQiLtFhylgEzu1MuF7JcEHyyWunTsa9S0"
+    let manuallyGeneratedRefreshToken = "7vohv-B9br3Zl8FlO-t-djnjnosBGy2k0"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let refreshToken = Storage.shared.refreshToken ?? manuallyGeneratedRefreshToken
+        //let refreshToken = manuallyGeneratedRefreshToken
 
         sessionManager = SessionManager(refreshToken: refreshToken)
 
@@ -51,15 +52,19 @@ class ViewController: NSViewController {
     }
 
     private func didGet(accounts: [Account]) {
-        let startTime = "2021-01-01T00:00:00+00:00"
-        let endTime = "2021-01-22T00:00:00+00:00"
+        let startTime = "2021-04-02T00:00:00+00:00"
+        let endTime = "2021-04-25T00:00:00+00:00"
 
 //        for account in accounts {
 //            getExecutions(for: account, startTime: startTime, endTime: endTime)
 //        }
 
+//        for account in accounts {
+//            getActivities(for: account, startTime: startTime, endTime: endTime)
+//        }
+
         for account in accounts {
-            getActivities(for: account, startTime: startTime, endTime: endTime)
+            getOrders(for: account, startTime: startTime, endTime: endTime, filter: .All)
         }
     }
 
@@ -85,6 +90,24 @@ class ViewController: NSViewController {
                 print("activities count: \(response.activities.count)")
                 for activity in response.activities {
                     print("account: \(account.number) -  activity: \(activity.action)")
+                }
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }
+    }
+
+    private func getOrders(for account: Account,
+                           startTime: String,
+                           endTime: String,
+                           filter: OrderStateFilterType) {
+        currentSession?.getAccountOrders(accountNumber: account.number, startTime: startTime, endTime: endTime, filter: filter) { result in
+            switch result {
+            case .success(let response):
+                print("orders count: \(response.orders.count)")
+                for order in response.orders {
+                    print("account: \(account.number) -  order: \(order.symbol) - order type: \(order.orderType)")
                 }
             case .failure(let error):
                 print(error)

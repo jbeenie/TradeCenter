@@ -194,7 +194,7 @@ public enum OrderClass: String, Decodable {
 }
 
 
-public enum StrategyTypes: String, Decodable {
+public enum StrategyType: String, Decodable {
     case CoveredCall        // Covered Call
     case MarriedPuts        // Married Put
     case VerticalCallSpread // Vertical Call

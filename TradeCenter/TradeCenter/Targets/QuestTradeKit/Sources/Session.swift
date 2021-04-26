@@ -50,4 +50,18 @@ public class Session {
                                  tokenType: tokenType,
                                  completion: completion)
     }
+
+    public func getAccountOrders(accountNumber: String,
+                                     startTime: String,
+                                     endTime: String,
+                                     filter: OrderStateFilterType,
+                                     completion: @escaping (GetAccountOrdersResult) -> Void) {
+        api.getAccountOrders(accountNumber: accountNumber,
+                                 startTime: startTime,
+                                 endTime: endTime,
+                                 filter: filter,
+                                 accessToken: accessToken,
+                                 tokenType: tokenType,
+                                 completion: completion)
+    }
 }

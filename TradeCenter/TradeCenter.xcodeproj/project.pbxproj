@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A67511C52636613000DDDE3F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511C42636613000DDDE3F /* Order.swift */; };
 		A67511C72636663B00DDDE3F /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511C62636663B00DDDE3F /* Enumerations.swift */; };
+		A67511C92636741F00DDDE3F /* GetAccountOrdersAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511C82636741F00DDDE3F /* GetAccountOrdersAction.swift */; };
 		A6C628C2261935D600FFE179 /* GetAccountsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628C1261935D600FFE179 /* GetAccountsAction.swift */; };
 		A6C628C5261937EC00FFE179 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628C4261937EC00FFE179 /* Account.swift */; };
 		A6C628C626193E0400FFE179 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628BF26192E9500FFE179 /* SessionManager.swift */; };
 		A6C628C726193E0400FFE179 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628BD26192E4D00FFE179 /* Session.swift */; };
 		A6C628C926197F3A00FFE179 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628C826197F3A00FFE179 /* Storage.swift */; };
-		A6C628CB261987B300FFE179 /* GetAccountExecutions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628CA261987B300FFE179 /* GetAccountExecutions.swift */; };
+		A6C628CB261987B300FFE179 /* GetAccountExecutionsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628CA261987B300FFE179 /* GetAccountExecutionsAction.swift */; };
 		A6C628CD2619893700FFE179 /* AccountAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628CC2619893700FFE179 /* AccountAction.swift */; };
 		A6C628D02619908000FFE179 /* Execution.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628CE26198F5A00FFE179 /* Execution.swift */; };
 		A6C628D4261A968C00FFE179 /* GetAccountActivitiesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628D3261A968C00FFE179 /* GetAccountActivitiesAction.swift */; };
@@ -110,13 +112,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A67511C42636613000DDDE3F /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		A67511C62636663B00DDDE3F /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
+		A67511C82636741F00DDDE3F /* GetAccountOrdersAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountOrdersAction.swift; sourceTree = "<group>"; };
 		A6C628BD26192E4D00FFE179 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		A6C628BF26192E9500FFE179 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		A6C628C1261935D600FFE179 /* GetAccountsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountsAction.swift; sourceTree = "<group>"; };
 		A6C628C4261937EC00FFE179 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		A6C628C826197F3A00FFE179 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		A6C628CA261987B300FFE179 /* GetAccountExecutions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountExecutions.swift; sourceTree = "<group>"; };
+		A6C628CA261987B300FFE179 /* GetAccountExecutionsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountExecutionsAction.swift; sourceTree = "<group>"; };
 		A6C628CC2619893700FFE179 /* AccountAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAction.swift; sourceTree = "<group>"; };
 		A6C628CE26198F5A00FFE179 /* Execution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Execution.swift; sourceTree = "<group>"; };
 		A6C628D3261A968C00FFE179 /* GetAccountActivitiesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountActivitiesAction.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 			children = (
 				A6C628C4261937EC00FFE179 /* Account.swift */,
 				A6C628CE26198F5A00FFE179 /* Execution.swift */,
+				A67511C42636613000DDDE3F /* Order.swift */,
 				A6C628D5261A96FE00FFE179 /* Activity.swift */,
 				A67511C62636663B00DDDE3F /* Enumerations.swift */,
 			);
@@ -200,10 +205,11 @@
 		A6C628D1261A95BB00FFE179 /* AccountActions */ = {
 			isa = PBXGroup;
 			children = (
-				A6C628CA261987B300FFE179 /* GetAccountExecutions.swift */,
-				A6C628C1261935D600FFE179 /* GetAccountsAction.swift */,
 				A6C628CC2619893700FFE179 /* AccountAction.swift */,
 				A6C628D3261A968C00FFE179 /* GetAccountActivitiesAction.swift */,
+				A6C628CA261987B300FFE179 /* GetAccountExecutionsAction.swift */,
+				A67511C82636741F00DDDE3F /* GetAccountOrdersAction.swift */,
+				A6C628C1261935D600FFE179 /* GetAccountsAction.swift */,
 			);
 			path = AccountActions;
 			sourceTree = "<group>";
@@ -632,7 +638,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6C628CB261987B300FFE179 /* GetAccountExecutions.swift in Sources */,
+				A6C628CB261987B300FFE179 /* GetAccountExecutionsAction.swift in Sources */,
 				A6CB90EC25FEA66D00611B46 /* QuestTradeAuthenticationHttpActionHandler.swift in Sources */,
 				A6CB90E825FEA31000611B46 /* QuestTradeAPI.swift in Sources */,
 				A6C628C2261935D600FFE179 /* GetAccountsAction.swift in Sources */,
@@ -645,6 +651,8 @@
 				A6C628C626193E0400FFE179 /* SessionManager.swift in Sources */,
 				A6C628C726193E0400FFE179 /* Session.swift in Sources */,
 				A67511C72636663B00DDDE3F /* Enumerations.swift in Sources */,
+				A67511C52636613000DDDE3F /* Order.swift in Sources */,
+				A67511C92636741F00DDDE3F /* GetAccountOrdersAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
