@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A642027B263FB01A00845862 /* TradeCenterModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6420272263FB01900845862 /* TradeCenterModel.framework */; };
+		A6420282263FB01A00845862 /* TradeCenterModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6420281263FB01A00845862 /* TradeCenterModelTests.swift */; };
+		A6420284263FB01A00845862 /* TradeCenterModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A6420274263FB01900845862 /* TradeCenterModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6420287263FB01A00845862 /* TradeCenterModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6420272263FB01900845862 /* TradeCenterModel.framework */; };
+		A6420288263FB01A00845862 /* TradeCenterModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6420272263FB01900845862 /* TradeCenterModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A67511C52636613000DDDE3F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511C42636613000DDDE3F /* Order.swift */; };
 		A67511C72636663B00DDDE3F /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511C62636663B00DDDE3F /* Enumerations.swift */; };
 		A67511C92636741F00DDDE3F /* GetAccountBalancesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511C82636741F00DDDE3F /* GetAccountBalancesAction.swift */; };
@@ -52,6 +57,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A642027C263FB01A00845862 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6CB907325FE85D700611B46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6420271263FB01900845862;
+			remoteInfo = TradeCenterModel;
+		};
+		A642027E263FB01A00845862 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6CB907325FE85D700611B46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6CB907A25FE85D700611B46;
+			remoteInfo = TradeCenter;
+		};
+		A6420285263FB01A00845862 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6CB907325FE85D700611B46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6420271263FB01900845862;
+			remoteInfo = TradeCenterModel;
+		};
 		A6CB909B25FE96CF00611B46 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A6CB907325FE85D700611B46 /* Project object */;
@@ -97,6 +123,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				A6CB909E25FE96CF00611B46 /* HTTPKit.framework in Embed Frameworks */,
+				A6420288263FB01A00845862 /* TradeCenterModel.framework in Embed Frameworks */,
 				A6CB90D025FE9A1E00611B46 /* QuestTradeKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -116,6 +143,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A6420272263FB01900845862 /* TradeCenterModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TradeCenterModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6420274263FB01900845862 /* TradeCenterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TradeCenterModel.h; sourceTree = "<group>"; };
+		A6420275263FB01900845862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A642027A263FB01A00845862 /* TradeCenterModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeCenterModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6420281263FB01A00845862 /* TradeCenterModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeCenterModelTests.swift; sourceTree = "<group>"; };
+		A6420283263FB01A00845862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A67511C42636613000DDDE3F /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		A67511C62636663B00DDDE3F /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
 		A67511C82636741F00DDDE3F /* GetAccountBalancesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountBalancesAction.swift; sourceTree = "<group>"; };
@@ -163,11 +196,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A642026F263FB01900845862 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6420277263FB01A00845862 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A642027B263FB01A00845862 /* TradeCenterModel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6CB907825FE85D700611B46 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A6CB909D25FE96CF00611B46 /* HTTPKit.framework in Frameworks */,
+				A6420287263FB01A00845862 /* TradeCenterModel.framework in Frameworks */,
 				A6CB90CF25FE9A1E00611B46 /* QuestTradeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +247,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6420273263FB01900845862 /* TradeCenterModel */ = {
+			isa = PBXGroup;
+			children = (
+				A6420290263FB11B00845862 /* Resources */,
+				A642028F263FB11300845862 /* Sources */,
+			);
+			path = TradeCenterModel;
+			sourceTree = "<group>";
+		};
+		A6420280263FB01A00845862 /* TradeCenterModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				A6420281263FB01A00845862 /* TradeCenterModelTests.swift */,
+				A6420283263FB01A00845862 /* Info.plist */,
+			);
+			path = TradeCenterModelTests;
+			sourceTree = "<group>";
+		};
+		A642028F263FB11300845862 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A6420274263FB01900845862 /* TradeCenterModel.h */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A6420290263FB11B00845862 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A6420275263FB01900845862 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		A6C628C3261937DB00FFE179 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +332,8 @@
 				A6CB909625FE96CF00611B46 /* HTTPKit.framework */,
 				A6CB90BA25FE9A1E00611B46 /* QuestTradeKit.framework */,
 				A6CB90C225FE9A1E00611B46 /* QuestTradeKitTests.xctest */,
+				A6420272263FB01900845862 /* TradeCenterModel.framework */,
+				A642027A263FB01A00845862 /* TradeCenterModelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -271,6 +356,8 @@
 				A6CB90BB25FE9A1E00611B46 /* QuestTradeKit */,
 				A6CB90C825FE9A1E00611B46 /* QuestTradeKitTests */,
 				A6CB90A325FE96D600611B46 /* TradeCenter */,
+				A6420273263FB01900845862 /* TradeCenterModel */,
+				A6420280263FB01A00845862 /* TradeCenterModelTests */,
 			);
 			path = Targets;
 			sourceTree = "<group>";
@@ -443,6 +530,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		A642026D263FB01900845862 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6420284263FB01A00845862 /* TradeCenterModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6CB909125FE96CF00611B46 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,6 +557,43 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		A6420271263FB01900845862 /* TradeCenterModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6420289263FB01A00845862 /* Build configuration list for PBXNativeTarget "TradeCenterModel" */;
+			buildPhases = (
+				A642026D263FB01900845862 /* Headers */,
+				A642026E263FB01900845862 /* Sources */,
+				A642026F263FB01900845862 /* Frameworks */,
+				A6420270263FB01900845862 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TradeCenterModel;
+			productName = TradeCenterModel;
+			productReference = A6420272263FB01900845862 /* TradeCenterModel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A6420279263FB01A00845862 /* TradeCenterModelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A642028C263FB01A00845862 /* Build configuration list for PBXNativeTarget "TradeCenterModelTests" */;
+			buildPhases = (
+				A6420276263FB01A00845862 /* Sources */,
+				A6420277263FB01A00845862 /* Frameworks */,
+				A6420278263FB01A00845862 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A642027D263FB01A00845862 /* PBXTargetDependency */,
+				A642027F263FB01A00845862 /* PBXTargetDependency */,
+			);
+			name = TradeCenterModelTests;
+			productName = TradeCenterModelTests;
+			productReference = A642027A263FB01A00845862 /* TradeCenterModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A6CB907A25FE85D700611B46 /* TradeCenter */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6CB908B25FE85DA00611B46 /* Build configuration list for PBXNativeTarget "TradeCenter" */;
@@ -476,6 +608,7 @@
 			dependencies = (
 				A6CB909C25FE96CF00611B46 /* PBXTargetDependency */,
 				A6CB90CE25FE9A1E00611B46 /* PBXTargetDependency */,
+				A6420286263FB01A00845862 /* PBXTargetDependency */,
 			);
 			name = TradeCenter;
 			productName = TradeCenter;
@@ -549,6 +682,13 @@
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = Beenie;
 				TargetAttributes = {
+					A6420271263FB01900845862 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					A6420279263FB01A00845862 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = A6CB907A25FE85D700611B46;
+					};
 					A6CB907A25FE85D700611B46 = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -583,11 +723,27 @@
 				A6CB909525FE96CF00611B46 /* HTTPKit */,
 				A6CB90B925FE9A1E00611B46 /* QuestTradeKit */,
 				A6CB90C125FE9A1E00611B46 /* QuestTradeKitTests */,
+				A6420271263FB01900845862 /* TradeCenterModel */,
+				A6420279263FB01A00845862 /* TradeCenterModelTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A6420270263FB01900845862 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6420278263FB01A00845862 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6CB907925FE85D700611B46 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -622,6 +778,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A642026E263FB01900845862 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6420276263FB01A00845862 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6420282263FB01A00845862 /* TradeCenterModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6CB907725FE85D700611B46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -683,6 +854,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A642027D263FB01A00845862 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6420271263FB01900845862 /* TradeCenterModel */;
+			targetProxy = A642027C263FB01A00845862 /* PBXContainerItemProxy */;
+		};
+		A642027F263FB01A00845862 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6CB907A25FE85D700611B46 /* TradeCenter */;
+			targetProxy = A642027E263FB01A00845862 /* PBXContainerItemProxy */;
+		};
+		A6420286263FB01A00845862 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6420271263FB01900845862 /* TradeCenterModel */;
+			targetProxy = A6420285263FB01A00845862 /* PBXContainerItemProxy */;
+		};
 		A6CB909C25FE96CF00611B46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A6CB909525FE96CF00611B46 /* HTTPKit */;
@@ -722,6 +908,100 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A642028A263FB01A00845862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 884AY45F52;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TradeCenter/Targets/TradeCenterModel/Resources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Beenie.TradeCenterModel;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A642028B263FB01A00845862 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 884AY45F52;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TradeCenter/Targets/TradeCenterModel/Resources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Beenie.TradeCenterModel;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A642028D263FB01A00845862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 884AY45F52;
+				INFOPLIST_FILE = TradeCenter/Targets/TradeCenterModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Beenie.TradeCenterModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TradeCenter.app/Contents/MacOS/TradeCenter";
+			};
+			name = Debug;
+		};
+		A642028E263FB01A00845862 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 884AY45F52;
+				INFOPLIST_FILE = TradeCenter/Targets/TradeCenterModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Beenie.TradeCenterModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TradeCenter.app/Contents/MacOS/TradeCenter";
+			};
+			name = Release;
+		};
 		A6CB908925FE85DA00611B46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1034,6 +1314,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A6420289263FB01A00845862 /* Build configuration list for PBXNativeTarget "TradeCenterModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A642028A263FB01A00845862 /* Debug */,
+				A642028B263FB01A00845862 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A642028C263FB01A00845862 /* Build configuration list for PBXNativeTarget "TradeCenterModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A642028D263FB01A00845862 /* Debug */,
+				A642028E263FB01A00845862 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A6CB907625FE85D700611B46 /* Build configuration list for PBXProject "TradeCenter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

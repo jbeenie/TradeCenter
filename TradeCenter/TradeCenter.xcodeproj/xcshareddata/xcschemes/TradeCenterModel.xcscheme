@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A6CB907A25FE85D700611B46"
-               BuildableName = "TradeCenter.app"
-               BlueprintName = "TradeCenter"
+               BlueprintIdentifier = "A6420271263FB01900845862"
+               BuildableName = "TradeCenterModel.framework"
+               BlueprintName = "TradeCenterModel"
                ReferencedContainer = "container:TradeCenter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,16 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A6CB90C125FE9A1E00611B46"
-               BuildableName = "QuestTradeKitTests.xctest"
-               BlueprintName = "QuestTradeKitTests"
-               ReferencedContainer = "container:TradeCenter.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
@@ -60,16 +50,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A6CB907A25FE85D700611B46"
-            BuildableName = "TradeCenter.app"
-            BlueprintName = "TradeCenter"
-            ReferencedContainer = "container:TradeCenter.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -77,16 +57,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A6CB907A25FE85D700611B46"
-            BuildableName = "TradeCenter.app"
-            BlueprintName = "TradeCenter"
+            BlueprintIdentifier = "A6420271263FB01900845862"
+            BuildableName = "TradeCenterModel.framework"
+            BlueprintName = "TradeCenterModel"
             ReferencedContainer = "container:TradeCenter.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
