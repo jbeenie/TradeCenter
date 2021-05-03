@@ -1,5 +1,5 @@
 //
-//  Activities.swift
+//  Currency.swift
 //  TradeCenterModel
 //
 //  Created by Jeremie Benhamron on 2021-05-02.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-public struct Activity {
-    
+public enum Currency: String {
+    case CAD, USD
 }
