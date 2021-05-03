@@ -12,6 +12,16 @@
 		A6420284263FB01A00845862 /* TradeCenterModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A6420274263FB01900845862 /* TradeCenterModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6420287263FB01A00845862 /* TradeCenterModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6420272263FB01900845862 /* TradeCenterModel.framework */; };
 		A6420288263FB01A00845862 /* TradeCenterModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6420272263FB01900845862 /* TradeCenterModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A6420292263FB1B200845862 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6420291263FB1B200845862 /* AccountManager.swift */; };
+		A6420294263FB20800845862 /* AccountManagerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6420293263FB20800845862 /* AccountManagerDataSource.swift */; };
+		A6420296263FB36900845862 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6420295263FB36900845862 /* Account.swift */; };
+		A6420298263FB5A500845862 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6420297263FB5A500845862 /* Activity.swift */; };
+		A642029A263FB5B500845862 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6420299263FB5B500845862 /* Order.swift */; };
+		A642029C263FB5C500845862 /* Execution.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642029B263FB5C500845862 /* Execution.swift */; };
+		A642029E263FB61800845862 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642029D263FB61800845862 /* Balance.swift */; };
+		A64202A0263FB69C00845862 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642029F263FB69C00845862 /* Position.swift */; };
+		A64202A5263FB87B00845862 /* PortfolioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64202A4263FB87B00845862 /* PortfolioManager.swift */; };
+		A64202AA263FB8F300845862 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64202A9263FB8F300845862 /* Portfolio.swift */; };
 		A67511C52636613000DDDE3F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511C42636613000DDDE3F /* Order.swift */; };
 		A67511C72636663B00DDDE3F /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511C62636663B00DDDE3F /* Enumerations.swift */; };
 		A67511C92636741F00DDDE3F /* GetAccountBalancesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511C82636741F00DDDE3F /* GetAccountBalancesAction.swift */; };
@@ -149,6 +159,16 @@
 		A642027A263FB01A00845862 /* TradeCenterModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeCenterModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6420281263FB01A00845862 /* TradeCenterModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeCenterModelTests.swift; sourceTree = "<group>"; };
 		A6420283263FB01A00845862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6420291263FB1B200845862 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		A6420293263FB20800845862 /* AccountManagerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManagerDataSource.swift; sourceTree = "<group>"; };
+		A6420295263FB36900845862 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		A6420297263FB5A500845862 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		A6420299263FB5B500845862 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		A642029B263FB5C500845862 /* Execution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Execution.swift; sourceTree = "<group>"; };
+		A642029D263FB61800845862 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
+		A642029F263FB69C00845862 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		A64202A4263FB87B00845862 /* PortfolioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioManager.swift; sourceTree = "<group>"; };
+		A64202A9263FB8F300845862 /* Portfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
 		A67511C42636613000DDDE3F /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		A67511C62636663B00DDDE3F /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
 		A67511C82636741F00DDDE3F /* GetAccountBalancesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountBalancesAction.swift; sourceTree = "<group>"; };
@@ -268,6 +288,9 @@
 		A642028F263FB11300845862 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A64202A8263FB8D000845862 /* Models */,
+				A64202A3263FB84B00845862 /* PortfolioManager */,
+				A64202A2263FB83E00845862 /* AccountMananger */,
 				A6420274263FB01900845862 /* TradeCenterModel.h */,
 			);
 			path = Sources;
@@ -279,6 +302,37 @@
 				A6420275263FB01900845862 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A64202A2263FB83E00845862 /* AccountMananger */ = {
+			isa = PBXGroup;
+			children = (
+				A6420291263FB1B200845862 /* AccountManager.swift */,
+				A6420293263FB20800845862 /* AccountManagerDataSource.swift */,
+			);
+			path = AccountMananger;
+			sourceTree = "<group>";
+		};
+		A64202A3263FB84B00845862 /* PortfolioManager */ = {
+			isa = PBXGroup;
+			children = (
+				A64202A4263FB87B00845862 /* PortfolioManager.swift */,
+			);
+			path = PortfolioManager;
+			sourceTree = "<group>";
+		};
+		A64202A8263FB8D000845862 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A6420295263FB36900845862 /* Account.swift */,
+				A6420297263FB5A500845862 /* Activity.swift */,
+				A642029D263FB61800845862 /* Balance.swift */,
+				A642029B263FB5C500845862 /* Execution.swift */,
+				A6420299263FB5B500845862 /* Order.swift */,
+				A642029F263FB69C00845862 /* Position.swift */,
+				A64202A9263FB8F300845862 /* Portfolio.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A6C628C3261937DB00FFE179 /* Model */ = {
@@ -684,6 +738,7 @@
 				TargetAttributes = {
 					A6420271263FB01900845862 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					A6420279263FB01A00845862 = {
 						CreatedOnToolsVersion = 11.6;
@@ -782,6 +837,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A642029C263FB5C500845862 /* Execution.swift in Sources */,
+				A6420298263FB5A500845862 /* Activity.swift in Sources */,
+				A6420294263FB20800845862 /* AccountManagerDataSource.swift in Sources */,
+				A6420292263FB1B200845862 /* AccountManager.swift in Sources */,
+				A64202A5263FB87B00845862 /* PortfolioManager.swift in Sources */,
+				A64202AA263FB8F300845862 /* Portfolio.swift in Sources */,
+				A6420296263FB36900845862 /* Account.swift in Sources */,
+				A642029E263FB61800845862 /* Balance.swift in Sources */,
+				A64202A0263FB69C00845862 /* Position.swift in Sources */,
+				A642029A263FB5B500845862 /* Order.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -911,6 +976,7 @@
 		A642028A263FB01A00845862 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -929,6 +995,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Beenie.TradeCenterModel;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -938,6 +1005,7 @@
 		A642028B263FB01A00845862 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
