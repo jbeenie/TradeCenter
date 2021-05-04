@@ -29,6 +29,9 @@
 		A64202B6263FC8F400845862 /* Buy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64202B5263FC8F400845862 /* Buy.swift */; };
 		A64202B8263FC90600845862 /* Sell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64202B7263FC90600845862 /* Sell.swift */; };
 		A64202BA263FCA9700845862 /* ForXConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64202B9263FCA9700845862 /* ForXConversion.swift */; };
+		A64202BD2641213900845862 /* DateDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64202BC2641213900845862 /* DateDecodingTests.swift */; };
+		A64202BF2641218200845862 /* Date.json in Resources */ = {isa = PBXBuildFile; fileRef = A64202BE2641218200845862 /* Date.json */; };
+		A64202C1264129D500845862 /* QuestTradeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64202C0264129D500845862 /* QuestTradeAction.swift */; };
 		A67511C52636613000DDDE3F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511C42636613000DDDE3F /* Order.swift */; };
 		A67511C72636663B00DDDE3F /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511C62636663B00DDDE3F /* Enumerations.swift */; };
 		A67511C92636741F00DDDE3F /* GetAccountBalancesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511C82636741F00DDDE3F /* GetAccountBalancesAction.swift */; };
@@ -183,6 +186,9 @@
 		A64202B5263FC8F400845862 /* Buy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buy.swift; sourceTree = "<group>"; };
 		A64202B7263FC90600845862 /* Sell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sell.swift; sourceTree = "<group>"; };
 		A64202B9263FCA9700845862 /* ForXConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForXConversion.swift; sourceTree = "<group>"; };
+		A64202BC2641213900845862 /* DateDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecodingTests.swift; sourceTree = "<group>"; };
+		A64202BE2641218200845862 /* Date.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Date.json; sourceTree = "<group>"; };
+		A64202C0264129D500845862 /* QuestTradeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTradeAction.swift; sourceTree = "<group>"; };
 		A67511C42636613000DDDE3F /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		A67511C62636663B00DDDE3F /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
 		A67511C82636741F00DDDE3F /* GetAccountBalancesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountBalancesAction.swift; sourceTree = "<group>"; };
@@ -543,6 +549,7 @@
 			isa = PBXGroup;
 			children = (
 				A6CB90CB25FE9A1E00611B46 /* Info.plist */,
+				A64202BE2641218200845862 /* Date.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -570,6 +577,7 @@
 			isa = PBXGroup;
 			children = (
 				A6CB90C925FE9A1E00611B46 /* QuestTradeKitTests.swift */,
+				A64202BC2641213900845862 /* DateDecodingTests.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -592,9 +600,10 @@
 		A6CB90E925FEA39100611B46 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				A6C628D2261A95C900FFE179 /* MarketActions */,
-				A6C628D1261A95BB00FFE179 /* AccountActions */,
 				A6CB90EE25FEA89F00611B46 /* GetAccessTokenAction.swift */,
+				A64202C0264129D500845862 /* QuestTradeAction.swift */,
+				A6C628D1261A95BB00FFE179 /* AccountActions */,
+				A6C628D2261A95C900FFE179 /* MarketActions */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -872,6 +881,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A64202BF2641218200845862 /* Date.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -947,6 +957,7 @@
 				A6C628D4261A968C00FFE179 /* GetAccountActivitiesAction.swift in Sources */,
 				A6C628D6261A96FE00FFE179 /* Activity.swift in Sources */,
 				A67511CF263682B100DDDE3F /* Position.swift in Sources */,
+				A64202C1264129D500845862 /* QuestTradeAction.swift in Sources */,
 				A6CB90EF25FEA89F00611B46 /* GetAccessTokenAction.swift in Sources */,
 				A6C628D02619908000FFE179 /* Execution.swift in Sources */,
 				A67511D12636838900DDDE3F /* GetAccountPositionsAction.swift in Sources */,
@@ -964,6 +975,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A64202BD2641213900845862 /* DateDecodingTests.swift in Sources */,
 				A6CB90CA25FE9A1E00611B46 /* QuestTradeKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

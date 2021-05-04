@@ -9,7 +9,7 @@
 import Foundation
 import HTTPKit
 
-public protocol AccountAction: HttpAction {
+public protocol AccountAction: QuestTradeAction {
     var accessToken: String { get }
     var tokenType: String { get }
 }

@@ -10,8 +10,8 @@ import Foundation
 
 public struct Activity: Decodable {
     public let tradeDate: String
-    public let transactionDate: String
-    public let settlementDate: String
+    public let transactionDate: Date
+    public let settlementDate: Date
     public let action: String
     public let symbol: String
     public let symbolId: UInt64

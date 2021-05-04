@@ -13,8 +13,10 @@ public protocol HttpAction {
     var body: Data? { get }
     var timeout: TimeInterval { get }
 
-    /// Allows actions to define their own decoding logic if necessary
     func result(from data: Data) -> ResultType
+
+    /// Allows actions to customize their own JSON decoder if necessary
+    var jsonDecoder: JSONDecoder { get }
 }
 
 public extension HttpAction where Self.Response: Decodable {
@@ -23,12 +25,16 @@ public extension HttpAction where Self.Response: Decodable {
         switch contentType {
         case .json:
             do {
-                let response = try JSONDecoder().decode(Response.self, from: data)
+                let response = try jsonDecoder.decode(Response.self, from: data)
                 return .success(response)
             } catch let error {
                 return .failure(error)
             }
         }
+    }
+
+    var jsonDecoder: JSONDecoder {
+        return JSONDecoder()
     }
 }
 
