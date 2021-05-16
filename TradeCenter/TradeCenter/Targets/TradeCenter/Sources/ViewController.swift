@@ -16,7 +16,7 @@ class ViewController: NSViewController {
     
     var sessionManager: SessionManager?
 
-    let manuallyGeneratedRefreshToken = "w-qXI13eXCB5dQ6dZ53qAfFD6RJO349D0"
+    let manuallyGeneratedRefreshToken = "HQq8DqiypkhSl3N0781YzAEEXSqNyk0w0"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,31 +52,34 @@ class ViewController: NSViewController {
     }
 
     private func didGet(accounts: [Account]) {
-        let startTime = "2021-04-02T00:00:00+00:00"
-        let endTime = "2021-04-25T00:00:00+00:00"
+        guard let startTime = QuestTradeAPI.querryDateFormatter.date(from: "2021-03-02T00:00:00"),
+            let endTime = QuestTradeAPI.querryDateFormatter.date(from: "2021-03-25T00:00:00") else {
+                return
+        }
 
-//        for account in accounts {
-//            getExecutions(for: account, startTime: startTime, endTime: endTime)
-//        }
 
-//        for account in accounts {
-//            getActivities(for: account, startTime: startTime, endTime: endTime)
-//        }
-
-//        for account in accounts {
-//            getOrders(for: account, startTime: startTime, endTime: endTime, filter: .All)
-//        }
-
-//        for account in accounts {
-//            getAccountBalances(for: account)
-//        }
+        //        for account in accounts {
+        //            getExecutions(for: account, startTime: startTime, endTime: endTime)
+        //        }
 
         for account in accounts {
-            getAccountPositions(for: account)
+            getActivities(for: account, startTime: startTime, endTime: endTime)
         }
+
+        //        for account in accounts {
+        //            getOrders(for: account, startTime: startTime, endTime: endTime, filter: .All)
+        //        }
+
+        //        for account in accounts {
+        //            getAccountBalances(for: account)
+        //        }
+
+        //        for account in accounts {
+        //            getAccountPositions(for: account)
+        //        }
     }
 
-    private func getExecutions(for account: Account, startTime: String, endTime: String) {
+    private func getExecutions(for account: Account, startTime: Date, endTime: Date) {
         currentSession?.getAccountExecutions(accountNumber: account.number, startTime: startTime, endTime: endTime) { result in
             switch result {
             case .success(let response):
@@ -91,13 +94,13 @@ class ViewController: NSViewController {
         }
     }
 
-    private func getActivities(for account: Account, startTime: String, endTime: String) {
+    private func getActivities(for account: Account, startTime: Date, endTime: Date) {
         currentSession?.getAccountActivities(accountNumber: account.number, startTime: startTime, endTime: endTime) { result in
             switch result {
             case .success(let response):
                 print("activities count: \(response.activities.count)")
                 for activity in response.activities {
-                    print("account: \(account.number) -  activity: \(activity.action)")
+                    print("account: \(account.number) -  activity: \(activity.action) - date: \(activity.transactionDate) - desc: \(activity.description)")
                 }
             case .failure(let error):
                 print(error)
@@ -107,8 +110,8 @@ class ViewController: NSViewController {
     }
 
     private func getOrders(for account: Account,
-                           startTime: String,
-                           endTime: String,
+                           startTime: Date,
+                           endTime: Date,
                            filter: OrderStateFilterType) {
         currentSession?.getAccountOrders(accountNumber: account.number, startTime: startTime, endTime: endTime, filter: filter) { result in
             switch result {

@@ -22,15 +22,15 @@ struct GetAccountActivitiesAction: AccountAction {
     }
 
     let accountNumber: String
-    let startTime: String
-    let endTime: String
+    let startTime: Date
+    let endTime: Date
     let method: HttpMethod = .get
     let accessToken: String
     let tokenType: String
 
     var queryItems: [URLQueryItem]? {
-        let startTimeItem = URLQueryItem(name: "startTime", value: startTime)
-        let endTimeItem = URLQueryItem(name: "endTime", value: endTime)
+        let startTimeItem = URLQueryItem(name: "startTime", value: QuestTradeAPI.responseDateFormatter.string(from: startTime))
+        let endTimeItem = URLQueryItem(name: "endTime", value: QuestTradeAPI.responseDateFormatter.string(from: endTime))
         return [startTimeItem, endTimeItem]
     }
 }

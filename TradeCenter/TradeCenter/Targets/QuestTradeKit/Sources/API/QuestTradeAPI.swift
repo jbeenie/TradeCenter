@@ -12,14 +12,22 @@ import HTTPKit
 public protocol QuestTradeAPIInterface {
     static func getAccessToken(refreshToken: String, completion: @escaping (GetAccessTokenResult) -> Void)
     func getAccounts(accessToken: String, tokenType: String, completion: @escaping (GetAccountsResult) -> Void)
-    func getAccountExecutions(accountNumber: String, startTime: String, endTime: String, accessToken: String, tokenType: String, completion: @escaping (GetAccountExecutionsResult) -> Void)
-    func getAccountActivities(accountNumber: String, startTime: String, endTime: String, accessToken: String, tokenType: String, completion: @escaping (GetAccountActivitiesResult) -> Void)
-    func getAccountOrders(accountNumber: String, startTime: String, endTime: String, filter: OrderStateFilterType, accessToken: String, tokenType: String, completion: @escaping (GetAccountOrdersResult) -> Void)
+    func getAccountExecutions(accountNumber: String, startTime: Date, endTime: Date, accessToken: String, tokenType: String, completion: @escaping (GetAccountExecutionsResult) -> Void)
+    func getAccountActivities(accountNumber: String, startTime: Date, endTime: Date, accessToken: String, tokenType: String, completion: @escaping (GetAccountActivitiesResult) -> Void)
+    func getAccountOrders(accountNumber: String, startTime: Date, endTime: Date, filter: OrderStateFilterType, accessToken: String, tokenType: String, completion: @escaping (GetAccountOrdersResult) -> Void)
     func getAccountBalances(accountNumber: String, accessToken: String, tokenType: String, completion: @escaping (GetAccountBalancesResult) -> Void)
     func getAccountPositions(accountNumber: String, accessToken: String, tokenType: String, completion: @escaping (GetAccountPositionsResult) -> Void)
 }
 
 public final class QuestTradeAPI: QuestTradeAPIInterface {
+    public static var responseDateFormatter: DateFormatter {
+        return .iso8601Full;
+    }
+
+    public static var querryDateFormatter: DateFormatter {
+        return .iso8601
+    }
+    
     public static func getAccessToken(refreshToken: String,
                                completion: @escaping (GetAccessTokenResult) -> Void) {
         let action = GetAccessTokenAction(refreshToken: refreshToken)
@@ -34,8 +42,8 @@ public final class QuestTradeAPI: QuestTradeAPIInterface {
     }
     
     public func getAccountExecutions(accountNumber: String,
-                                     startTime: String,
-                                     endTime: String,
+                                     startTime: Date,
+                                     endTime: Date,
                                      accessToken: String,
                                      tokenType: String,
                                      completion: @escaping (GetAccountExecutionsResult) -> Void) {
@@ -43,7 +51,7 @@ public final class QuestTradeAPI: QuestTradeAPIInterface {
         actionHandler.run(action: action, completion: completion)
     }
 
-    public func getAccountActivities(accountNumber: String, startTime: String, endTime: String, accessToken: String, tokenType: String, completion: @escaping (GetAccountActivitiesResult) -> Void) {
+    public func getAccountActivities(accountNumber: String, startTime: Date, endTime: Date, accessToken: String, tokenType: String, completion: @escaping (GetAccountActivitiesResult) -> Void) {
         let action = GetAccountActivitiesAction(accountNumber: accountNumber,
                                                 startTime: startTime,
                                                 endTime: endTime,
@@ -52,7 +60,7 @@ public final class QuestTradeAPI: QuestTradeAPIInterface {
         actionHandler.run(action: action, completion: completion)
     }
 
-    public func getAccountOrders(accountNumber: String, startTime: String, endTime: String, filter: OrderStateFilterType, accessToken: String, tokenType: String, completion: @escaping (GetAccountOrdersResult) -> Void) {
+    public func getAccountOrders(accountNumber: String, startTime: Date, endTime: Date, filter: OrderStateFilterType, accessToken: String, tokenType: String, completion: @escaping (GetAccountOrdersResult) -> Void) {
         let action = GetAccountOrdersAction(accountNumber: accountNumber,
                                                 startTime: startTime,
                                                 endTime: endTime,

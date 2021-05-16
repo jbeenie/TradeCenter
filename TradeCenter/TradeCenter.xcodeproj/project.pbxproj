@@ -74,6 +74,7 @@
 		A6CB90E825FEA31000611B46 /* QuestTradeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB90E725FEA31000611B46 /* QuestTradeAPI.swift */; };
 		A6CB90EC25FEA66D00611B46 /* QuestTradeAuthenticationHttpActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB90EB25FEA66D00611B46 /* QuestTradeAuthenticationHttpActionHandler.swift */; };
 		A6CB90EF25FEA89F00611B46 /* GetAccessTokenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB90EE25FEA89F00611B46 /* GetAccessTokenAction.swift */; };
+		A6ECCFE32651AFE700232EE7 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ECCFE22651AFE700232EE7 /* DateFormatter+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -233,6 +234,7 @@
 		A6CB90E725FEA31000611B46 /* QuestTradeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTradeAPI.swift; sourceTree = "<group>"; };
 		A6CB90EB25FEA66D00611B46 /* QuestTradeAuthenticationHttpActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTradeAuthenticationHttpActionHandler.swift; sourceTree = "<group>"; };
 		A6CB90EE25FEA89F00611B46 /* GetAccessTokenAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccessTokenAction.swift; sourceTree = "<group>"; };
+		A6ECCFE22651AFE700232EE7 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -565,10 +567,11 @@
 		A6CB90DA25FE9AA300611B46 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A6CB90BC25FE9A1E00611B46 /* QuestTradeKit.h */,
 				A6C628BD26192E4D00FFE179 /* Session.swift */,
 				A6C628BF26192E9500FFE179 /* SessionManager.swift */,
-				A6CB90BC25FE9A1E00611B46 /* QuestTradeKit.h */,
 				A6CB90F025FEAED800611B46 /* API */,
+				A6ECCFE12651AFC800232EE7 /* Extensions */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -633,6 +636,14 @@
 				A6CB90EA25FEA39700611B46 /* Errors */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		A6ECCFE12651AFC800232EE7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A6ECCFE22651AFE700232EE7 /* DateFormatter+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -965,6 +976,7 @@
 				A6C628C626193E0400FFE179 /* SessionManager.swift in Sources */,
 				A6C628C726193E0400FFE179 /* Session.swift in Sources */,
 				A67511C72636663B00DDDE3F /* Enumerations.swift in Sources */,
+				A6ECCFE32651AFE700232EE7 /* DateFormatter+Extension.swift in Sources */,
 				A67511C52636613000DDDE3F /* Order.swift in Sources */,
 				A67511CB26367FD400DDDE3F /* Balance.swift in Sources */,
 				A67511C92636741F00DDDE3F /* GetAccountBalancesAction.swift in Sources */,

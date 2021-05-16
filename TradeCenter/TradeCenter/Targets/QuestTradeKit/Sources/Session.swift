@@ -28,8 +28,8 @@ public class Session {
     }
 
     public func getAccountExecutions(accountNumber: String,
-                                     startTime: String,
-                                     endTime: String,
+                                     startTime: Date,
+                                     endTime: Date,
                                      completion: @escaping (GetAccountExecutionsResult) -> Void) {
         api.getAccountExecutions(accountNumber: accountNumber,
                                  startTime: startTime,
@@ -40,8 +40,8 @@ public class Session {
     }
 
     public func getAccountActivities(accountNumber: String,
-                                     startTime: String,
-                                     endTime: String,
+                                     startTime: Date,
+                                     endTime: Date,
                                      completion: @escaping (GetAccountActivitiesResult) -> Void) {
         api.getAccountActivities(accountNumber: accountNumber,
                                  startTime: startTime,
@@ -52,8 +52,8 @@ public class Session {
     }
 
     public func getAccountOrders(accountNumber: String,
-                                     startTime: String,
-                                     endTime: String,
+                                     startTime: Date,
+                                     endTime: Date,
                                      filter: OrderStateFilterType,
                                      completion: @escaping (GetAccountOrdersResult) -> Void) {
         api.getAccountOrders(accountNumber: accountNumber,
