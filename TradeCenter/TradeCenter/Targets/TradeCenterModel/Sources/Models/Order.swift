@@ -9,5 +9,7 @@
 import Foundation
 
 public struct Order {
+    public init() {
 
+    }
 }

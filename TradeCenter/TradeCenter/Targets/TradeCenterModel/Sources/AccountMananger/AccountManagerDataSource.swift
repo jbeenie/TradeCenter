@@ -9,13 +9,13 @@
 import Foundation
 
 public protocol AccountManagerDataSource: class {
-    func getExecutions(for account: Account,
+    func getExecutions(for account: Account, startTime: Date, endTime: Date,
                        completion: @escaping ([Execution]) -> Void)
 
-    func getActivities(for account: Account,
+    func getActivities(for account: Account, startTime: Date, endTime: Date,
                        completion: @escaping ([Activity]) -> Void)
 
-    func getAccountOrders(for account: Account,
+    func getAccountOrders(for account: Account, startTime: Date, endTime: Date,
                           completion: @escaping ([Order]) -> Void)
 
     func getBalances(for account: Account,

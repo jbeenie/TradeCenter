@@ -9,5 +9,7 @@
 import Foundation
 
 public struct Balance {
+    public init() {
 
+    }
 }
