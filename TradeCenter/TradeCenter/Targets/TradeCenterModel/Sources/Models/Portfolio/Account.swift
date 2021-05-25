@@ -11,6 +11,11 @@ import Foundation
 public struct Account: Hashable {
     public let type: AccountType
     public let number: String
+
+    public init(type: AccountType, number: String)  {
+        self.type = type
+        self.number = number
+    }
 }
 
 public enum AccountType: String, Decodable {

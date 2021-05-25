@@ -88,25 +88,27 @@ public class QuestTradeSessionAdaptor: AccountManagerDataSource {
 extension TradeCenterModel.Execution {
     init(execution: QuestTradeKit.Execution) {
         self.init()
+        // TODO: convert execution
     }
 }
 
 extension TradeCenterModel.Order {
     init(order: QuestTradeKit.Order) {
         self.init()
+        // TODO: convert order
     }
 }
 
 extension TradeCenterModel.Balance {
     init(balance: QuestTradeKit.Balance) {
         self.init()
+        // TODO: convert balance
     }
 }
 
 extension TradeCenterModel.Position {
     init(position: QuestTradeKit.Position) {
         self.init()
+        // TODO: convert position
     }
 }
-
-// TOOD: Make adaptor initializers for Class conforming to Activity protocol

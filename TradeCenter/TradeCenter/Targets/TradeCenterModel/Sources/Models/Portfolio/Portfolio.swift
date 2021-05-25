@@ -8,6 +8,10 @@
 
 import Foundation
 
-struct Portfolio {
-    var accounts: [Account]
+public struct Portfolio {
+    public let accounts: [Account]
+
+    public init(accounts: [Account]) {
+        self.accounts = accounts
+    }
 }

@@ -41,6 +41,7 @@
 		A67511D12636838900DDDE3F /* GetAccountPositionsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511D02636838800DDDE3F /* GetAccountPositionsAction.swift */; };
 		A6C10298265C9AF60056ED7F /* ActivityFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C10297265C9AF60056ED7F /* ActivityFactory.swift */; };
 		A6C1029A265CA3900056ED7F /* CurrencyAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C10299265CA3900056ED7F /* CurrencyAdaptor.swift */; };
+		A6C1029C265CB17F0056ED7F /* AccountAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C1029B265CB17F0056ED7F /* AccountAdaptor.swift */; };
 		A6C628C2261935D600FFE179 /* GetAccountsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628C1261935D600FFE179 /* GetAccountsAction.swift */; };
 		A6C628C5261937EC00FFE179 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628C4261937EC00FFE179 /* Account.swift */; };
 		A6C628C626193E0400FFE179 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628BF26192E9500FFE179 /* SessionManager.swift */; };
@@ -202,6 +203,7 @@
 		A67511D02636838800DDDE3F /* GetAccountPositionsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountPositionsAction.swift; sourceTree = "<group>"; };
 		A6C10297265C9AF60056ED7F /* ActivityFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFactory.swift; sourceTree = "<group>"; };
 		A6C10299265CA3900056ED7F /* CurrencyAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAdaptor.swift; sourceTree = "<group>"; };
+		A6C1029B265CB17F0056ED7F /* AccountAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAdaptor.swift; sourceTree = "<group>"; };
 		A6C628BD26192E4D00FFE179 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		A6C628BF26192E9500FFE179 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		A6C628C1261935D600FFE179 /* GetAccountsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountsAction.swift; sourceTree = "<group>"; };
@@ -659,6 +661,7 @@
 				A6ECCFE42651B6FE00232EE7 /* QuestTradeSessionAdaptor.swift */,
 				A6C10297265C9AF60056ED7F /* ActivityFactory.swift */,
 				A6C10299265CA3900056ED7F /* CurrencyAdaptor.swift */,
+				A6C1029B265CB17F0056ED7F /* AccountAdaptor.swift */,
 			);
 			path = QuestTradeAdaptor;
 			sourceTree = "<group>";
@@ -958,6 +961,7 @@
 				A6CB907F25FE85D700611B46 /* AppDelegate.swift in Sources */,
 				A6ECCFE62651B8C800232EE7 /* QuestTradeSessionAdaptor.swift in Sources */,
 				A6C628C926197F3A00FFE179 /* Storage.swift in Sources */,
+				A6C1029C265CB17F0056ED7F /* AccountAdaptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

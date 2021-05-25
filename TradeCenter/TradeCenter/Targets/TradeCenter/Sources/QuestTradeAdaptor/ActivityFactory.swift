@@ -21,7 +21,7 @@ enum ActivityType {
 
 public class ActivityFactory {
     public static func createActivity(from activity: QuestTradeKit.Activity) -> TradeCenterModel.Activity? {
-        switch activity.type {
+        switch activity.action {
         case ActivityType.buy:
             return Buy(description: activity.description,
                        date: activity.transactionDate,

@@ -9,9 +9,9 @@
 import Foundation
 
 public class PortfolioManager {
-    private var accountManagers: [Account: AccountManager]
+    public private(set) var accountManagers: [Account: AccountManager]
 
-    init(portfolio: Portfolio, dataSource: AccountManagerDataSource) {
+    public init(portfolio: Portfolio, dataSource: AccountManagerDataSource) {
         self.accountManagers = [:]
 
         for account in portfolio.accounts {

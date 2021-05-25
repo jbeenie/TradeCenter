@@ -15,10 +15,17 @@
 
 
  3. Create QuestTradeAccountAdaptor (adaptor)
- 	- conforms to AccountManagerDataSource, s
- 	- has a session manager 
- 	- delegates function calls to session of session manager
- 	- do conversion inside this class
+ 	- conforms to AccountManagerDataSource (done)
+ 	- has a session  (done)
+ 	- delegates function calls to session (done)
+ 	
+ 	- finish implementing Acticity Factory
+ 	- finish converting  Execution/Order/Balance/Position
+
+ 4. Figure out how to get all activities since the beginning of account 
 
  4. Add ability to set time zone via Quest trade API
+
+
+
 

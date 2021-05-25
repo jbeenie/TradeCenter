@@ -8,6 +8,7 @@
 
 import Cocoa
 import QuestTradeKit
+import TradeCenterModel
 
 class ViewController: NSViewController {
     var currentSession: Session? {
@@ -15,14 +16,16 @@ class ViewController: NSViewController {
     }
     
     var sessionManager: SessionManager?
+    var questTradeAdaptor: QuestTradeSessionAdaptor?
+    var portfolioManager: PortfolioManager?
 
-    let manuallyGeneratedRefreshToken = "HQq8DqiypkhSl3N0781YzAEEXSqNyk0w0"
+    let manuallyGeneratedRefreshToken = "-AC7K4yQ8YoELscYJFQKWwFUbp9JzqyF0"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let refreshToken = Storage.shared.refreshToken ?? manuallyGeneratedRefreshToken
-        //let refreshToken = manuallyGeneratedRefreshToken
+//        let refreshToken = manuallyGeneratedRefreshToken
 
         sessionManager = SessionManager(refreshToken: refreshToken)
 
@@ -34,12 +37,12 @@ class ViewController: NSViewController {
 
             // Store the new refresh token in persistent storage
             Storage.shared.refreshToken = self?.sessionManager?.refreshToken
-
             self?.sesstionDidStart(session: session)
         }
     }
 
     private func sesstionDidStart(session: Session) {
+        questTradeAdaptor = QuestTradeSessionAdaptor(session: session)
         session.getAccounts { [weak self] result in
             switch result {
             case .success(let response):
@@ -51,35 +54,40 @@ class ViewController: NSViewController {
         }
     }
 
-    private func didGet(accounts: [Account]) {
+    private func didGet(accounts: [QuestTradeKit.Account]) {
+        guard let questTradeAdaptor = questTradeAdaptor else {
+            print("questTradeAdaptor is nil.")
+            return
+        }
+
+        let portfolio = Portfolio(accounts: accounts.map { Account($0) })
+        portfolioManager = PortfolioManager(portfolio: portfolio, dataSource: questTradeAdaptor)
+        
         guard let startTime = QuestTradeAPI.querryDateFormatter.date(from: "2021-03-02T00:00:00"),
             let endTime = QuestTradeAPI.querryDateFormatter.date(from: "2021-03-25T00:00:00") else {
                 return
         }
 
-
-        //        for account in accounts {
-        //            getExecutions(for: account, startTime: startTime, endTime: endTime)
-        //        }
-
         for account in accounts {
-            getActivities(for: account, startTime: startTime, endTime: endTime)
+//            // getExecutions(for: account, startTime: startTime, endTime: endTime)
+//            // getOrders(for: account, startTime: startTime, endTime: endTime, filter: .All)
+//            // getAccountBalances(for: account)
+//            // getAccountPositions(for: account)
+//            getActivities(for: account, startTime: startTime, endTime: endTime)
         }
 
-        //        for account in accounts {
-        //            getOrders(for: account, startTime: startTime, endTime: endTime, filter: .All)
-        //        }
-
-        //        for account in accounts {
-        //            getAccountBalances(for: account)
-        //        }
-
-        //        for account in accounts {
-        //            getAccountPositions(for: account)
-        //        }
+        let accountManagers = portfolioManager?.accountManagers ?? [:]
+        for (account, accountManager) in accountManagers {
+            accountManager.getActivities(startTime: startTime, endTime: endTime) { activities in
+                for activity in activities {
+                    print("account: \(account.number) - type: \(type(of: activity)) - date: \(activity.date) - desc: \(activity.description)")
+                }
+            }
+        }
     }
 
-    private func getExecutions(for account: Account, startTime: Date, endTime: Date) {
+    // TODO: Get rid of this method once Quest trade adaptor is implemented
+    private func getExecutions(for account: QuestTradeKit.Account, startTime: Date, endTime: Date) {
         currentSession?.getAccountExecutions(accountNumber: account.number, startTime: startTime, endTime: endTime) { result in
             switch result {
             case .success(let response):
@@ -94,13 +102,14 @@ class ViewController: NSViewController {
         }
     }
 
-    private func getActivities(for account: Account, startTime: Date, endTime: Date) {
+    // TODO: Get rid of this method once Quest trade adaptor is implemented
+    private func getActivities(for account: QuestTradeKit.Account, startTime: Date, endTime: Date) {
         currentSession?.getAccountActivities(accountNumber: account.number, startTime: startTime, endTime: endTime) { result in
             switch result {
             case .success(let response):
                 print("activities count: \(response.activities.count)")
                 for activity in response.activities {
-                    print("account: \(account.number) -  activity: \(activity.action) - date: \(activity.transactionDate) - desc: \(activity.description)")
+                    print("account: \(account.number) - action: \(activity.action) - type: \(activity.type) - date: \(activity.transactionDate) - desc: \(activity.description)")
                 }
             case .failure(let error):
                 print(error)
@@ -109,7 +118,8 @@ class ViewController: NSViewController {
         }
     }
 
-    private func getOrders(for account: Account,
+    // TODO: Get rid of this method once Quest trade adaptor is implemented
+    private func getOrders(for account: QuestTradeKit.Account,
                            startTime: Date,
                            endTime: Date,
                            filter: OrderStateFilterType) {
@@ -127,7 +137,8 @@ class ViewController: NSViewController {
         }
     }
 
-    private func getAccountBalances(for account: Account) {
+    // TODO: Get rid of this method once Quest trade adaptor is implemented
+    private func getAccountBalances(for account: QuestTradeKit.Account) {
         currentSession?.getAccountBalances(accountNumber: account.number) { result in
             switch result {
             case .success(let response):
@@ -142,7 +153,8 @@ class ViewController: NSViewController {
         }
     }
 
-    private func getAccountPositions(for account: Account) {
+    // TODO: Get rid of this method once Quest trade adaptor is implemented
+    private func getAccountPositions(for account: QuestTradeKit.Account) {
         currentSession?.getAccountPositions(accountNumber: account.number) { result in
             switch result {
             case .success(let response):
