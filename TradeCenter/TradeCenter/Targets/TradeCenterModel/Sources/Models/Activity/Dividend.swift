@@ -22,4 +22,16 @@ public struct Dividend: Activity {
 
     /// The symbol of the equity the dividend was paid for.
     public let symbol: String
+
+    public init(description: String,
+                date: Date,
+                currency: Currency,
+                amount: Double,
+                symbol: String) {
+        self.description = description
+        self.date = date
+        self.currency = currency
+        self.amount = amount
+        self.symbol = symbol
+    }
 }

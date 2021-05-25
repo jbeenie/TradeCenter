@@ -13,7 +13,7 @@ public struct Sell: Trade {
     
     public let settlementDate: Date
 
-    public let quantity: Int
+    public let quantity: Double
 
     public let symbol: String
 
@@ -24,4 +24,22 @@ public struct Sell: Trade {
     public let currency: Currency
 
     public let amount: Double
+
+    public init(description: String,
+                date: Date,
+                settlementDate: Date,
+                symbol: String,
+                quantity: Double,
+                amount: Double,
+                commission: Double,
+                currency: Currency) {
+        self.description = description
+        self.date = date
+        self.settlementDate = settlementDate
+        self.symbol = symbol
+        self.quantity = quantity
+        self.amount = amount
+        self.commission = commission
+        self.currency = currency
+    }
 }

@@ -13,7 +13,7 @@ public protocol Trade: Activity {
     var settlementDate: Date { get }
 
     /// The amount of units traded.
-    var quantity: Int { get }
+    var quantity: Double { get }
 
     /// The symbol of the equity traded.
     var symbol: String { get }

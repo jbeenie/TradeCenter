@@ -27,7 +27,6 @@ public class QuestTradeSessionAdaptor: AccountManagerDataSource {
                 completion(response.executions.map { TradeCenterModel.Execution(execution: $0) })
             case .failure(let error):
                 print(error)
-                break
             }
         }
     }
@@ -37,12 +36,9 @@ public class QuestTradeSessionAdaptor: AccountManagerDataSource {
         session.getAccountActivities(accountNumber: account.number, startTime: startTime, endTime: endTime) { result in
             switch result {
             case .success(let response):
-                // TODO: Create appropriate Activity Type
-                //completion(response.activities.map { TradeCenterModel.Activity(activity: $0) })
-                break
+                completion(response.activities.compactMap { ActivityFactory.createActivity(from: $0) })
             case .failure(let error):
                 print(error)
-                break
             }
         }
     }
@@ -58,7 +54,6 @@ public class QuestTradeSessionAdaptor: AccountManagerDataSource {
                 completion(response.orders.map { TradeCenterModel.Order(order: $0) })
             case .failure(let error):
                 print(error)
-                break
             }
         }
     }
@@ -73,7 +68,6 @@ public class QuestTradeSessionAdaptor: AccountManagerDataSource {
                 break
             case .failure(let error):
                 print(error)
-                break
             }
         }
     }
@@ -86,7 +80,6 @@ public class QuestTradeSessionAdaptor: AccountManagerDataSource {
                 completion(response.positions.map { TradeCenterModel.Position(position: $0) })
             case .failure(let error):
                 print(error)
-                break
             }
         }
     }
