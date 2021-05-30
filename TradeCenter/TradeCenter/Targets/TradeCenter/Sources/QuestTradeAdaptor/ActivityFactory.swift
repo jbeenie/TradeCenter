@@ -46,8 +46,10 @@ public class ActivityFactory {
                 amount: activity.netAmount,
                 symbol: activity.symbol)
         case ActivityType.forExchange:
-            // TODO: Convert for ex
-            return nil
+            return TradeCenterModel.ForX(description: activity.description,
+                                         date: activity.transactionDate,
+                                         currency: Currency(activity.currency),
+                                         amount: activity.netAmount)
 
         case ActivityType.sell:
             return Sell(description: activity.description,

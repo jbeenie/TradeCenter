@@ -26,3 +26,25 @@ public struct ForXConversion: Activity {
 
     public let description: String
 }
+
+public struct ForX: Activity {
+    public var date: Date
+
+    /// The currency received in the for exchange.
+    public var currency: Currency
+
+    /// The amount received in a for exchange conversion.
+    public var amount: Double
+
+    public var description: String
+
+     public init(description: String,
+                   date: Date,
+                   currency: Currency,
+                   amount: Double) {
+           self.description = description
+           self.date = date
+           self.currency = currency
+           self.amount = amount
+       }
+}
