@@ -19,4 +19,14 @@ public struct Deposit: Activity {
 
     /// The currency of the deposited amount.
     public let currency: Currency
+
+    public init(description: String,
+                date: Date,
+                amount: Double,
+                currency: Currency) {
+           self.description = description
+           self.date = date
+           self.amount = amount
+           self.currency = currency
+       }
 }

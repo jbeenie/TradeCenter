@@ -19,8 +19,12 @@ public struct Activity: Decodable {
     public let currency: Currency
     public let quantity: Double
     public let price: Double
-    public let grossAmount: Double
     public let commission: Double
-    public let netAmount: Double
     public let type: String
+
+    /// Amount before commission
+    public let grossAmount: Double
+
+    /// Amount after commission
+    public let netAmount: Double
 }

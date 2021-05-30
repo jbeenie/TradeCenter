@@ -16,7 +16,7 @@ enum ActivityType {
     static let dividend = "DIV"
     static let forExchange = "FXT"
     static let sell = "Sell"
-    // TODO: Add other acticity types
+    // TODO: Add other activity types
 }
 
 public class ActivityFactory {
@@ -33,18 +33,20 @@ public class ActivityFactory {
                        currency: Currency(activity.currency))
 
         case ActivityType.deposit:
-            // TODO: Convert deposits
-            return nil
+            return Deposit(description: activity.description,
+                           date: activity.transactionDate,
+                           amount: activity.netAmount,
+                           currency: Currency(activity.currency))
 
         case ActivityType.dividend:
             return TradeCenterModel.Dividend(
                 description: activity.description,
-                date: activity.transactionDate, // TODO: Revise (Options: transaction/trade/settlement date)
+                date: activity.transactionDate,
                 currency: Currency(activity.currency),
-                amount: activity.netAmount, // TODO: Revise (Options net/gross amount)
+                amount: activity.netAmount,
                 symbol: activity.symbol)
         case ActivityType.forExchange:
-            // TODO: Convert deposits
+            // TODO: Convert for ex
             return nil
 
         case ActivityType.sell:
