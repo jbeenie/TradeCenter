@@ -10,6 +10,6 @@ import Foundation
 
 public struct Position {
     public init() {
-
+        // TODO: Implement position initializer
     }
 }

@@ -10,6 +10,6 @@ import Foundation
 
 public struct Balance {
     public init() {
-
+        // TODO: Implement balance initializer
     }
 }
