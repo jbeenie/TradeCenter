@@ -19,9 +19,9 @@ public class QuestTradeSessionAdaptor: AccountManagerDataSource {
 
     // MARK: - AccountManagerDataSource
 
-    public func getExecutions(for account: TradeCenterModel.Account, startTime: Date, endTime: Date,
+    public func getExecutions(for account: TradeCenterModel.Account, interval: DateInterval,
                               completion: @escaping ([TradeCenterModel.Execution]) -> Void) {
-        session.getAccountExecutions(accountNumber: account.number, startTime: startTime, endTime: endTime) { result in
+        session.getAccountExecutions(accountNumber: account.number, interval: interval) { result in
             switch result {
             case .success(let response):
                 completion(response.executions.map { TradeCenterModel.Execution(execution: $0) })
@@ -31,9 +31,9 @@ public class QuestTradeSessionAdaptor: AccountManagerDataSource {
         }
     }
 
-    public func getActivities(for account: TradeCenterModel.Account, startTime: Date, endTime: Date,
+    public func getActivities(for account: TradeCenterModel.Account, interval: DateInterval,
                               completion: @escaping ([TradeCenterModel.Activity]) -> Void) {
-        session.getAccountActivities(accountNumber: account.number, startTime: startTime, endTime: endTime) { result in
+        session.getAccountActivities(accountNumber: account.number, interval: interval) { result in
             switch result {
             case .success(let response):
                 completion(response.activities.compactMap { ActivityFactory.createActivity(from: $0) })
@@ -43,11 +43,10 @@ public class QuestTradeSessionAdaptor: AccountManagerDataSource {
         }
     }
 
-    public func getAccountOrders(for account: TradeCenterModel.Account, startTime: Date, endTime: Date,
+    public func getAccountOrders(for account: TradeCenterModel.Account, interval: DateInterval,
                                  completion: @escaping ([TradeCenterModel.Order]) -> Void) {
         session.getAccountOrders(accountNumber: account.number,
-                                 startTime: startTime,
-                                 endTime: endTime,
+                                 interval: interval,
                                  filter: .All) { result in
             switch result {
             case .success(let response):

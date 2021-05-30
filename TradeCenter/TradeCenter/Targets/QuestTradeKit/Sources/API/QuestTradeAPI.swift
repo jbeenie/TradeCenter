@@ -12,9 +12,9 @@ import HTTPKit
 public protocol QuestTradeAPIInterface {
     static func getAccessToken(refreshToken: String, completion: @escaping (GetAccessTokenResult) -> Void)
     func getAccounts(accessToken: String, tokenType: String, completion: @escaping (GetAccountsResult) -> Void)
-    func getAccountExecutions(accountNumber: String, startTime: Date, endTime: Date, accessToken: String, tokenType: String, completion: @escaping (GetAccountExecutionsResult) -> Void)
-    func getAccountActivities(accountNumber: String, startTime: Date, endTime: Date, accessToken: String, tokenType: String, completion: @escaping (GetAccountActivitiesResult) -> Void)
-    func getAccountOrders(accountNumber: String, startTime: Date, endTime: Date, filter: OrderStateFilterType, accessToken: String, tokenType: String, completion: @escaping (GetAccountOrdersResult) -> Void)
+    func getAccountExecutions(accountNumber: String, interval: DateInterval, accessToken: String, tokenType: String, completion: @escaping (GetAccountExecutionsResult) -> Void)
+    func getAccountActivities(accountNumber: String, interval: DateInterval, accessToken: String, tokenType: String, completion: @escaping (GetAccountActivitiesResult) -> Void)
+    func getAccountOrders(accountNumber: String, interval: DateInterval, filter: OrderStateFilterType, accessToken: String, tokenType: String, completion: @escaping (GetAccountOrdersResult) -> Void)
     func getAccountBalances(accountNumber: String, accessToken: String, tokenType: String, completion: @escaping (GetAccountBalancesResult) -> Void)
     func getAccountPositions(accountNumber: String, accessToken: String, tokenType: String, completion: @escaping (GetAccountPositionsResult) -> Void)
 }
@@ -42,28 +42,25 @@ public final class QuestTradeAPI: QuestTradeAPIInterface {
     }
     
     public func getAccountExecutions(accountNumber: String,
-                                     startTime: Date,
-                                     endTime: Date,
+                                     interval: DateInterval,
                                      accessToken: String,
                                      tokenType: String,
                                      completion: @escaping (GetAccountExecutionsResult) -> Void) {
-        let action = GetAccountExecutionsAction(accountNumber: accountNumber, startTime: startTime, endTime: endTime, accessToken: accessToken, tokenType: tokenType)
+        let action = GetAccountExecutionsAction(accountNumber: accountNumber, interval: interval, accessToken: accessToken, tokenType: tokenType)
         actionHandler.run(action: action, completion: completion)
     }
 
-    public func getAccountActivities(accountNumber: String, startTime: Date, endTime: Date, accessToken: String, tokenType: String, completion: @escaping (GetAccountActivitiesResult) -> Void) {
+    public func getAccountActivities(accountNumber: String, interval: DateInterval, accessToken: String, tokenType: String, completion: @escaping (GetAccountActivitiesResult) -> Void) {
         let action = GetAccountActivitiesAction(accountNumber: accountNumber,
-                                                startTime: startTime,
-                                                endTime: endTime,
+                                                interval: interval,
                                                 accessToken: accessToken,
                                                 tokenType: tokenType)
         actionHandler.run(action: action, completion: completion)
     }
 
-    public func getAccountOrders(accountNumber: String, startTime: Date, endTime: Date, filter: OrderStateFilterType, accessToken: String, tokenType: String, completion: @escaping (GetAccountOrdersResult) -> Void) {
+    public func getAccountOrders(accountNumber: String, interval: DateInterval, filter: OrderStateFilterType, accessToken: String, tokenType: String, completion: @escaping (GetAccountOrdersResult) -> Void) {
         let action = GetAccountOrdersAction(accountNumber: accountNumber,
-                                                startTime: startTime,
-                                                endTime: endTime,
+                                                interval: interval,
                                                 stateFilter: filter,
                                                 accessToken: accessToken,
                                                 tokenType: tokenType)

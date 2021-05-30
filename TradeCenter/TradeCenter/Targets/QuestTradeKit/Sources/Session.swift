@@ -28,37 +28,31 @@ public class Session {
     }
 
     public func getAccountExecutions(accountNumber: String,
-                                     startTime: Date,
-                                     endTime: Date,
+                                     interval: DateInterval,
                                      completion: @escaping (GetAccountExecutionsResult) -> Void) {
         api.getAccountExecutions(accountNumber: accountNumber,
-                                 startTime: startTime,
-                                 endTime: endTime,
+                                 interval: interval,
                                  accessToken: accessToken,
                                  tokenType: tokenType,
                                  completion: completion)
     }
 
     public func getAccountActivities(accountNumber: String,
-                                     startTime: Date,
-                                     endTime: Date,
+                                     interval: DateInterval,
                                      completion: @escaping (GetAccountActivitiesResult) -> Void) {
         api.getAccountActivities(accountNumber: accountNumber,
-                                 startTime: startTime,
-                                 endTime: endTime,
+                                 interval: interval,
                                  accessToken: accessToken,
                                  tokenType: tokenType,
                                  completion: completion)
     }
 
     public func getAccountOrders(accountNumber: String,
-                                     startTime: Date,
-                                     endTime: Date,
+                                     interval: DateInterval,
                                      filter: OrderStateFilterType,
                                      completion: @escaping (GetAccountOrdersResult) -> Void) {
         api.getAccountOrders(accountNumber: accountNumber,
-                                 startTime: startTime,
-                                 endTime: endTime,
+                                 interval: interval,
                                  filter: filter,
                                  accessToken: accessToken,
                                  tokenType: tokenType,

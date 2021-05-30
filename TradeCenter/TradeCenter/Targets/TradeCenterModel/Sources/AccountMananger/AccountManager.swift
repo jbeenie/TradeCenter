@@ -18,20 +18,20 @@ public class AccountManager {
     }
 
 
-    public func getExecutions(startTime: Date, endTime: Date, completion: @escaping ([Execution]) -> Void) {
-        dataSource?.getExecutions(for: account, startTime: startTime, endTime: endTime) { executions in
+    public func getExecutions(interval: DateInterval, completion: @escaping ([Execution]) -> Void) {
+        dataSource?.getExecutions(for: account, interval: interval) { executions in
             completion(executions)
         }
     }
 
-    public func getActivities(startTime: Date, endTime: Date, completion: @escaping ([Activity]) -> Void) {
-        dataSource?.getActivities(for: account, startTime: startTime, endTime: endTime) { activities in
+    public func getActivities(interval: DateInterval, completion: @escaping ([Activity]) -> Void) {
+        dataSource?.getActivities(for: account, interval: interval) { activities in
             completion(activities)
         }
     }
 
-    public func getAccountOrders(startTime: Date, endTime: Date, completion: @escaping ([Order]) -> Void) {
-        dataSource?.getAccountOrders(for: account, startTime: startTime, endTime: endTime) { orders in
+    public func getAccountOrders(interval: DateInterval, completion: @escaping ([Order]) -> Void) {
+        dataSource?.getAccountOrders(for: account, interval: interval) { orders in
             completion(orders)
         }
     }
