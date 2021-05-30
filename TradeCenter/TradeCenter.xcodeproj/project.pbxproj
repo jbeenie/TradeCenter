@@ -39,6 +39,7 @@
 		A67511CD2636806700DDDE3F /* GetAccountOrdersAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511CC2636806700DDDE3F /* GetAccountOrdersAction.swift */; };
 		A67511CF263682B100DDDE3F /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511CE263682B100DDDE3F /* Position.swift */; };
 		A67511D12636838900DDDE3F /* GetAccountPositionsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511D02636838800DDDE3F /* GetAccountPositionsAction.swift */; };
+		A689D0992664259000FF739A /* DateIntervalPartitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A689D0982664259000FF739A /* DateIntervalPartitioner.swift */; };
 		A6C10298265C9AF60056ED7F /* ActivityFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C10297265C9AF60056ED7F /* ActivityFactory.swift */; };
 		A6C1029A265CA3900056ED7F /* CurrencyAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C10299265CA3900056ED7F /* CurrencyAdaptor.swift */; };
 		A6C1029C265CB17F0056ED7F /* AccountAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C1029B265CB17F0056ED7F /* AccountAdaptor.swift */; };
@@ -205,6 +206,7 @@
 		A67511CC2636806700DDDE3F /* GetAccountOrdersAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountOrdersAction.swift; sourceTree = "<group>"; };
 		A67511CE263682B100DDDE3F /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		A67511D02636838800DDDE3F /* GetAccountPositionsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountPositionsAction.swift; sourceTree = "<group>"; };
+		A689D0982664259000FF739A /* DateIntervalPartitioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateIntervalPartitioner.swift; sourceTree = "<group>"; };
 		A6C10297265C9AF60056ED7F /* ActivityFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFactory.swift; sourceTree = "<group>"; };
 		A6C10299265CA3900056ED7F /* CurrencyAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAdaptor.swift; sourceTree = "<group>"; };
 		A6C1029B265CB17F0056ED7F /* AccountAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAdaptor.swift; sourceTree = "<group>"; };
@@ -682,6 +684,7 @@
 				A6DCE9592664113C001644AC /* Adaptors */,
 				A6ECCFE42651B6FE00232EE7 /* QuestTradeSessionAdaptor.swift */,
 				A6C10297265C9AF60056ED7F /* ActivityFactory.swift */,
+				A689D0982664259000FF739A /* DateIntervalPartitioner.swift */,
 			);
 			path = QuestTradeAdaptor;
 			sourceTree = "<group>";
@@ -979,6 +982,7 @@
 				A6C10298265C9AF60056ED7F /* ActivityFactory.swift in Sources */,
 				A6DCE956266410F3001644AC /* BalanceAdaptor.swift in Sources */,
 				A6DCE954266410D1001644AC /* OrderAdaptor.swift in Sources */,
+				A689D0992664259000FF739A /* DateIntervalPartitioner.swift in Sources */,
 				A6DCE95226641081001644AC /* ExecutionAdaptor.swift in Sources */,
 				A6CB908125FE85D700611B46 /* ViewController.swift in Sources */,
 				A6CB907F25FE85D700611B46 /* AppDelegate.swift in Sources */,
