@@ -23,8 +23,11 @@
  	- finish converting  Execution/Order/Balance/Position
 
  4. Figure out how to get all activities since the beginning of account 
+    - partition date interval
+    - send api request for each interval in the partition
+    - aggregate data
 
- 4. Add ability to set time zone via Quest trade API
+ 5. Add ability to set time zone via Quest trade API
 
 
 
