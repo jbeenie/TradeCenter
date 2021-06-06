@@ -11,7 +11,7 @@ import QuestTradeKit
 import TradeCenterModel
 
 extension TradeCenterModel.Account {
-    init(_ account: QuestTradeKit.Account) {
+    public init(_ account: QuestTradeKit.Account) {
         self.init(type: AccountType(account.type), number: account.number)
     }
 }

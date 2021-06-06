@@ -23,8 +23,8 @@ public class DateIntervalPartitioner {
         self.granularity = granularity
     }
 
+    // TODO: - Unit test this!
     public func partition(interval: DateInterval) -> [DateInterval] {
-        // TODO: - Unit test this!
         guard var startInterval = self.interval(containing: interval.start),
             var endInterval = self.interval(containing: interval.end) else {
                 return []

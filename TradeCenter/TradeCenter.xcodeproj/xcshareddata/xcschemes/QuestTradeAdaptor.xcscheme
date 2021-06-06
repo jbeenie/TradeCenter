@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A6CB907A25FE85D700611B46"
-               BuildableName = "TradeCenter.app"
-               BlueprintName = "TradeCenter"
+               BlueprintIdentifier = "A689D09E266D839200FF739A"
+               BuildableName = "QuestTradeAdaptor.framework"
+               BlueprintName = "QuestTradeAdaptor"
                ReferencedContainer = "container:TradeCenter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -38,26 +38,6 @@
                ReferencedContainer = "container:TradeCenter.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A6420279263FB01A00845862"
-               BuildableName = "TradeCenterModelTests.xctest"
-               BlueprintName = "TradeCenterModelTests"
-               ReferencedContainer = "container:TradeCenter.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A689D0A6266D839200FF739A"
-               BuildableName = "QuestTradeAdaptorTests.xctest"
-               BlueprintName = "QuestTradeAdaptorTests"
-               ReferencedContainer = "container:TradeCenter.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -70,16 +50,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A6CB907A25FE85D700611B46"
-            BuildableName = "TradeCenter.app"
-            BlueprintName = "TradeCenter"
-            ReferencedContainer = "container:TradeCenter.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -87,16 +57,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A6CB907A25FE85D700611B46"
-            BuildableName = "TradeCenter.app"
-            BlueprintName = "TradeCenter"
+            BlueprintIdentifier = "A689D09E266D839200FF739A"
+            BuildableName = "QuestTradeAdaptor.framework"
+            BlueprintName = "QuestTradeAdaptor"
             ReferencedContainer = "container:TradeCenter.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

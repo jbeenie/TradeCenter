@@ -9,6 +9,7 @@
 import Cocoa
 import QuestTradeKit
 import TradeCenterModel
+import QuestTradeAdaptor
 
 class ViewController: NSViewController {
     var currentSession: Session? {

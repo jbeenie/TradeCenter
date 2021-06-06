@@ -13,7 +13,7 @@ import TradeCenterModel
 public class QuestTradeSessionAdaptor: AccountManagerDataSource {
     private var session: Session
 
-    init(session: Session) {
+    public init(session: Session) {
         self.session = session
     }
 
