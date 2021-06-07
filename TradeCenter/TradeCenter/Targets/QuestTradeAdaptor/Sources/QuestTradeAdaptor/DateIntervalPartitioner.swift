@@ -23,7 +23,6 @@ public class DateIntervalPartitioner {
         self.granularity = granularity
     }
 
-    // TODO: - Unit test this!
     public func partition(interval: DateInterval) -> [DateInterval] {
         guard var startInterval = self.interval(containing: interval.start),
             var endInterval = self.interval(containing: interval.end) else {
@@ -41,7 +40,7 @@ public class DateIntervalPartitioner {
 
         var previousInterval = startInterval
 
-        while let nextInterval = self.nextInterval(after: previousInterval), nextInterval != endInterval {
+        while let nextInterval = self.nextInterval(after: previousInterval.start), nextInterval != endInterval {
             intervals.append(nextInterval)
             previousInterval = nextInterval
         }
@@ -51,13 +50,17 @@ public class DateIntervalPartitioner {
         return intervals
     }
 
+    internal func nextInterval(after date: Date) -> DateInterval? {
+        guard let startDateOfNextInterval = interval(containing: date)?.end.sameTimeTheDayAfter else {
+            return nil
+        }
+
+        return interval(containing: startDateOfNextInterval)
+    }
+
     internal func interval(containing date: Date) -> DateInterval? {
         let component = Calendar.Component(granularity: granularity)
         return calendar.dateInterval(of: component, for: date)
-    }
-
-    internal func nextInterval(after interval: DateInterval) -> DateInterval? {
-        return self.interval(containing: interval.end.sameTimeTheDayAfter)
     }
 }
 

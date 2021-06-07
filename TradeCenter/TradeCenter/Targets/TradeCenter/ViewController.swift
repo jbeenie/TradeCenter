@@ -20,7 +20,7 @@ class ViewController: NSViewController {
     var questTradeAdaptor: QuestTradeSessionAdaptor?
     var portfolioManager: PortfolioManager?
 
-    let manuallyGeneratedRefreshToken = "-AC7K4yQ8YoELscYJFQKWwFUbp9JzqyF0"
+    let manuallyGeneratedRefreshToken = "8-UrXbkW7qrJrUfFTTqquNS2enAB1zCV0"
 
     let dateFirstAccountOpened: Date = QuestTradeAPI.querryDateFormatter.date(from: "2020-03-10T00:00:00")!
 

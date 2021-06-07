@@ -40,7 +40,6 @@
 		A67511CF263682B100DDDE3F /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511CE263682B100DDDE3F /* Position.swift */; };
 		A67511D12636838900DDDE3F /* GetAccountPositionsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67511D02636838800DDDE3F /* GetAccountPositionsAction.swift */; };
 		A689D0A8266D839200FF739A /* QuestTradeAdaptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A689D09F266D839200FF739A /* QuestTradeAdaptor.framework */; };
-		A689D0AF266D839200FF739A /* QuestTradeAdaptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A689D0AE266D839200FF739A /* QuestTradeAdaptorTests.swift */; };
 		A689D0B1266D839200FF739A /* QuestTradeAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = A689D0A1266D839200FF739A /* QuestTradeAdaptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A689D0B4266D839200FF739A /* QuestTradeAdaptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A689D09F266D839200FF739A /* QuestTradeAdaptor.framework */; };
 		A689D0B5266D839200FF739A /* QuestTradeAdaptor.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A689D09F266D839200FF739A /* QuestTradeAdaptor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -57,6 +56,7 @@
 		A689D0CC266D867A00FF739A /* QuestTradeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB90BA25FE9A1E00611B46 /* QuestTradeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A689D0CF266D867A00FF739A /* TradeCenterModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6420272263FB01900845862 /* TradeCenterModel.framework */; };
 		A689D0D0266D867A00FF739A /* TradeCenterModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6420272263FB01900845862 /* TradeCenterModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A689D0D5266D891000FF739A /* DateIntervalPartitionerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A689D0D4266D891000FF739A /* DateIntervalPartitionerTests.swift */; };
 		A6C628C2261935D600FFE179 /* GetAccountsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628C1261935D600FFE179 /* GetAccountsAction.swift */; };
 		A6C628C5261937EC00FFE179 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628C4261937EC00FFE179 /* Account.swift */; };
 		A6C628C626193E0400FFE179 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C628BF26192E9500FFE179 /* SessionManager.swift */; };
@@ -261,8 +261,8 @@
 		A689D0A1266D839200FF739A /* QuestTradeAdaptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestTradeAdaptor.h; sourceTree = "<group>"; };
 		A689D0A2266D839200FF739A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A689D0A7266D839200FF739A /* QuestTradeAdaptorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestTradeAdaptorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A689D0AE266D839200FF739A /* QuestTradeAdaptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTradeAdaptorTests.swift; sourceTree = "<group>"; };
 		A689D0B0266D839200FF739A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A689D0D4266D891000FF739A /* DateIntervalPartitionerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateIntervalPartitionerTests.swift; sourceTree = "<group>"; };
 		A6C10297265C9AF60056ED7F /* ActivityFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFactory.swift; sourceTree = "<group>"; };
 		A6C10299265CA3900056ED7F /* CurrencyAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAdaptor.swift; sourceTree = "<group>"; };
 		A6C1029B265CB17F0056ED7F /* AccountAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAdaptor.swift; sourceTree = "<group>"; };
@@ -493,8 +493,7 @@
 			isa = PBXGroup;
 			children = (
 				A689D0C6266D859D00FF739A /* Resources */,
-				A689D0AE266D839200FF739A /* QuestTradeAdaptorTests.swift */,
-				A689D0B0266D839200FF739A /* Info.plist */,
+				A689D0D6266D895900FF739A /* Sources */,
 			);
 			path = QuestTradeAdaptorTests;
 			sourceTree = "<group>";
@@ -510,8 +509,17 @@
 		A689D0C6266D859D00FF739A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A689D0B0266D839200FF739A /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A689D0D6266D895900FF739A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A689D0D4266D891000FF739A /* DateIntervalPartitionerTests.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		A6C628C3261937DB00FFE179 /* Model */ = {
@@ -1177,7 +1185,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A689D0AF266D839200FF739A /* QuestTradeAdaptorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1237,6 +1244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A689D0D5266D891000FF739A /* DateIntervalPartitionerTests.swift in Sources */,
 				A64202BD2641213900845862 /* DateDecodingTests.swift in Sources */,
 				A6CB90CA25FE9A1E00611B46 /* QuestTradeKitTests.swift in Sources */,
 			);
