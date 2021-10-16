@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol AccountManagerDataSource: class {
+public protocol AccountManagerDataSource: AnyObject {
     func getExecutions(for account: Account, interval: DateInterval,
                        completion: @escaping ([Execution]) -> Void)
 

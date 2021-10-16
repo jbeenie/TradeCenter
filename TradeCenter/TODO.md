@@ -23,7 +23,7 @@
  	- finish converting  Execution/Order/Balance/Position
 
  4. Figure out how to get all activities since the beginning of account 
-    - partition date interval
+    - partition date interval (done)
     - send api request for each interval in the partition
     - aggregate data
 
