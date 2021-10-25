@@ -22,8 +22,8 @@ open class HttpActionHandler {
     public func run<T: HttpAction>(action: T,
                             completionQueue: DispatchQueue = .main,
                             completion: @escaping (T.ResultType) -> Void) {
-        process(action: action, completionQueue: completionQueue) { [weak self] result, response in
-            self?.log(result: result, response: response, for: action)
+        process(action: action, completionQueue: completionQueue) { [weak self] result, response, rawData in
+            self?.log(result: result, response: response, rawData: rawData, for: action)
             completion(result)
         }
     }
@@ -33,13 +33,13 @@ open class HttpActionHandler {
     /// Processes the given action and allows the action to decode a response from the data
     private func process<T: HttpAction>(action: T,
                                         completionQueue: DispatchQueue,
-                                        completion: @escaping (T.ResultType, HTTPURLResponse?) -> Void) {
+                                        completion: @escaping (T.ResultType, HTTPURLResponse?, Data?) -> Void) {
         let request: URLRequest
 
         do {
             request = try urlRequest(for: action)
         } catch let error {
-            completion(.failure(error), nil)
+            completion(.failure(error), nil, nil)
             return
         }
 
@@ -48,12 +48,12 @@ open class HttpActionHandler {
                 let httpURLResponse = urlResponse as? HTTPURLResponse
 
                 guard let data = data else {
-                    completion(.failure(HttpError.invalidResponse), httpURLResponse)
+                    completion(.failure(HttpError.invalidResponse), httpURLResponse, data)
                     return
                 }
 
                 let result = action.result(from: data)
-                completion(result, httpURLResponse)
+                completion(result, httpURLResponse, data)
             }
         }.resume()
     }
@@ -82,6 +82,7 @@ open class HttpActionHandler {
 
     private func log<T: HttpAction>(result: T.ResultType,
                                     response: HTTPURLResponse?,
+                                    rawData: Data?,
                                     for action: T) {
         guard let response = response,
             let url = response.url else {
@@ -95,7 +96,8 @@ open class HttpActionHandler {
         case .success:
             print("HTTP Success: (\(url), Status Code: \(statusCode)")
         case .failure(let error):
-            print("HTTP Error: (\(url), Error: \(error.localizedDescription), Status Code: \(statusCode)")
+            let serverResponse = String(decoding: rawData ?? Data(), as: UTF8.self)
+            print("HTTP Error: (\(url),\n Error: \(error.localizedDescription),\n Status Code: \(statusCode),\n response: \(serverResponse)\n\n")
         }
     }
 }
