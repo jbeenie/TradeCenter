@@ -13,7 +13,7 @@ public class DateIntervalPartitioner {
         case year
         case month
         case week
-        case day
+        case day(UInt)
     }
 
     let calendar = Calendar.current
@@ -24,6 +24,49 @@ public class DateIntervalPartitioner {
     }
 
     public func partition(interval: DateInterval) -> [DateInterval] {
+        switch granularity {
+        case .year, .month, .week:
+            return partitionIntoDateComponents(interval: interval)
+
+        case .day(let numberOfDays):
+            return partition(daysPerInterval: numberOfDays, interval: interval)
+        }
+    }
+
+    // MARK: - Partioning by number of days
+
+    public func partition(daysPerInterval: UInt, interval: DateInterval) -> [DateInterval] {
+        if calendar.numberOfDaysBetween(interval.start, and: interval.end) < daysPerInterval {
+            // the original interval was sufficient partitioned to begin with
+            return [interval]
+        }
+
+        var intervals = [DateInterval]()
+        var nextStartDate = interval.start
+        repeat {
+            var nextInterval = self.interval(startingAt: nextStartDate, lasting: daysPerInterval)!
+
+            if interval.end < nextInterval.end {
+                nextInterval.end = interval.end
+            }
+
+            intervals.append(nextInterval)
+            nextStartDate = nextInterval.end
+        } while nextStartDate < interval.end
+
+        return intervals
+    }
+
+    internal func interval(startingAt date: Date, lasting numberOfDays: UInt) -> DateInterval? {
+        guard let endDate = calendar.date(byAdding: .day, value: Int(numberOfDays), to: date) else {
+            return nil
+        }
+        return DateInterval(start: date, end: endDate)
+    }
+
+    // MARK: - Partioning by date component
+
+    public func partitionIntoDateComponents(interval: DateInterval) -> [DateInterval] {
         guard var startInterval = self.interval(containing: interval.start),
             var endInterval = self.interval(containing: interval.end) else {
                 return []
@@ -64,6 +107,8 @@ public class DateIntervalPartitioner {
     }
 }
 
+// MARK: -
+
 private extension Calendar.Component {
     init(granularity: DateIntervalPartitioner.Granularity) {
         switch granularity {
@@ -76,6 +121,17 @@ private extension Calendar.Component {
         case .day:
             self = .day
         }
+    }
+}
+
+extension Calendar {
+    // Number of days pass midnight, including a start date
+    func numberOfDaysBetween(_ from: Date, and to: Date) -> Int {
+        let fromDate = startOfDay(for: from)
+        let toDate = startOfDay(for: to)
+        let numberOfDays = dateComponents([.day], from: fromDate, to: toDate)
+
+        return numberOfDays.day! + 1
     }
 }
 

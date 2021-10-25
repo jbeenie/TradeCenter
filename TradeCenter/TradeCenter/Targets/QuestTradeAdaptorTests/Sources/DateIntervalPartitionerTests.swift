@@ -12,6 +12,25 @@ import Foundation
 
 class QuestTradeAdaptorTests: XCTestCase {
 
+    func testPartitionIntervalInto30Days() throws {
+        let dateIntervalPartioner = DateIntervalPartitioner(granularity: .day(30))
+        let dateInterval = self.dateInterval(from: "2021-03-07T08:00:00", to: "2021-08-24T08:00:00")
+        let intervals = dateIntervalPartioner.partition(interval: dateInterval)
+        let expected = [
+            self.dateInterval(from: "2021-03-07T08:00:00", to: "2021-04-06T07:00:00"),
+            self.dateInterval(from: "2021-04-06T07:00:00", to: "2021-05-06T07:00:00"),
+            self.dateInterval(from: "2021-05-06T07:00:00", to: "2021-06-05T07:00:00"),
+            self.dateInterval(from: "2021-06-05T07:00:00", to: "2021-07-05T07:00:00"),
+            self.dateInterval(from: "2021-07-05T07:00:00", to: "2021-08-04T07:00:00"),
+            self.dateInterval(from: "2021-08-04T07:00:00", to: "2021-08-24T08:00:0")
+        ]
+        XCTAssertEqual(intervals.count, expected.count)
+        for (expected, result) in zip(expected, intervals) {
+            XCTAssertEqual(result, expected)
+        }
+
+    }
+
     func testPartitionIntervalIntoWeeks() throws {
         let dateIntervalPartioner = DateIntervalPartitioner(granularity: .week)
         let dateInterval = self.dateInterval(from: "2021-03-01T08:00:00", to: "2021-03-24T08:00:00")
