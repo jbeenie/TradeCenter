@@ -25,6 +25,8 @@
  4. Figure out how to get all activities since the beginning of account 
     - partition date interval (done)
     - send api request for each interval in the partition
+        - update the QuestTradeAccountAdaptor to send out querry for each interval
+        - wait for all querries to be asnwered and return all the data all at once?
     - aggregate data
 
  5. Add ability to set time zone via Quest trade API

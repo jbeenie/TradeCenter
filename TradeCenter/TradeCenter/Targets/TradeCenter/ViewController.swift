@@ -20,7 +20,7 @@ class ViewController: NSViewController {
     var questTradeAdaptor: QuestTradeSessionAdaptor?
     var portfolioManager: PortfolioManager?
 
-    let manuallyGeneratedRefreshToken = "8-UrXbkW7qrJrUfFTTqquNS2enAB1zCV0"
+    let manuallyGeneratedRefreshToken = "YyJzoJnV-IsCsSPnQvVlXi2vFBqJ43UT0"
 
     let dateFirstAccountOpened: Date = QuestTradeAPI.querryDateFormatter.date(from: "2020-03-10T00:00:00")!
 
@@ -28,7 +28,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         let refreshToken = Storage.shared.refreshToken ?? manuallyGeneratedRefreshToken
-//        let refreshToken = manuallyGeneratedRefreshToken
+        //let refreshToken = manuallyGeneratedRefreshToken
 
         sessionManager = SessionManager(refreshToken: refreshToken)
 
@@ -67,7 +67,7 @@ class ViewController: NSViewController {
         portfolioManager = PortfolioManager(portfolio: portfolio, dataSource: questTradeAdaptor)
         
         guard let startTime = QuestTradeAPI.querryDateFormatter.date(from: "2021-03-02T00:00:00"),
-            let endTime = QuestTradeAPI.querryDateFormatter.date(from: "2021-03-25T00:00:00") else {
+            let endTime = QuestTradeAPI.querryDateFormatter.date(from: "2021-08-25T00:00:00") else {
                 return
         }
 
@@ -84,8 +84,23 @@ class ViewController: NSViewController {
         let accountManagers = portfolioManager?.accountManagers ?? [:]
         for (account, accountManager) in accountManagers {
             accountManager.getActivities(interval: interval) { activities in
-                for activity in activities {
-                    print("account: \(account.number) - type: \(type(of: activity)) - date: \(activity.date) - desc: \(activity.description)")
+                print("---------- Account: \(account.number) ----------------")
+                let dividends = activities.filter { $0 is Dividend }
+                let deposits = activities.filter { $0 is Deposit }
+                let forXs = activities.filter { $0 is ForXConversion }
+                print("---------- dividends ----------------")
+                for dividend in dividends {
+                    print("type: \(type(of: dividend)) - date: \(dividend.date) - desc: \(dividend.description)")
+                }
+                print("\n")
+                print("---------- deposits ----------------")
+                for deposit in deposits {
+                    print("type: \(type(of: deposit)) - date: \(deposit.date) - desc: \(deposit.description)")
+                }
+                print("\n")
+                print("---------- forX ----------------")
+                for forX in forXs {
+                    print("type: \(type(of: forX)) - date: \(forX.date) - desc: \(forX.description)")
                 }
             }
         }
