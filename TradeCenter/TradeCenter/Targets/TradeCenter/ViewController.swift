@@ -20,15 +20,15 @@ class ViewController: NSViewController {
     var questTradeAdaptor: QuestTradeSessionAdaptor?
     var portfolioManager: PortfolioManager?
 
-    let manuallyGeneratedRefreshToken = "a2tbwGm0MZTwXAK2ZPo2KyUJFW7QA_gq0"
+    let manuallyGeneratedRefreshToken = "_RtEUfrGWkb37X0CJegdmOKwAotYMXWU0"
 
     let dateFirstAccountOpened: Date = QuestTradeAPI.querryDateFormatter.date(from: "2020-03-10T00:00:00")!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let refreshToken = Storage.shared.refreshToken ?? manuallyGeneratedRefreshToken
-//        let refreshToken = manuallyGeneratedRefreshToken
+//        let refreshToken = Storage.shared.refreshToken ?? manuallyGeneratedRefreshToken
+        let refreshToken = manuallyGeneratedRefreshToken
 
         sessionManager = SessionManager(refreshToken: refreshToken)
 
@@ -79,11 +79,12 @@ class ViewController: NSViewController {
         }
 
         let accountManagers = portfolioManager?.accountManagers ?? [:]
-        for (account, accountManager) in accountManagers {
-            accountManager.getActivities(interval: interval) { [weak self] activities in
+        for (account, accountManager) in accountManagers.reversed() {
+            accountManager.getActivities(interval: interval) { activities in
+                let report = ActivityReport(activities: activities)
                 print("\n\n\n")
                 print("---------- Account: \(account.number) ----------------")
-                self?.printActivities(activities)
+                report.print()
             }
         }
     }
@@ -101,42 +102,6 @@ class ViewController: NSViewController {
         return DateInterval(start: start, end: end)
     }
 
-    func printActivities(_ activities: [TradeCenterModel.Activity]) {
-        let dividends = activities.filter { $0 is Dividend }
-        let deposits = activities.filter { $0 is Deposit }
-        let forXs = activities.filter { $0 is ForXConversion }
-        let sells = activities.filter { $0 is Sell }
-        let buys = activities.filter { $0 is Buy }
-        print("---------- dividends ----------------")
-        for dividend in dividends {
-            print("type: \(type(of: dividend)) - date: \(dividend.date) - desc: \(dividend.description)")
-        }
-        print("\n")
-        print("---------- deposits ----------------")
-        for deposit in deposits {
-            print("type: \(type(of: deposit)) - date: \(deposit.date) - desc: \(deposit.description)")
-        }
-        print("\n")
-        print("---------- forX ----------------")
-        for forX in forXs {
-            print("type: \(type(of: forX)) - date: \(forX.date) - desc: \(forX.description)")
-        }
-
-        print("\n")
-        print("---------- buys ----------------")
-        for buy in buys {
-            print("type: \(type(of: buy)) - date: \(buy.date) - desc: \(buy.description)")
-        }
-
-        print("\n")
-        print("---------- sells ----------------")
-        for sell in sells {
-            print("type: \(type(of: sell)) - date: \(sell.date) - desc: \(sell.description)")
-        }
-
-        print("--------------------------")
-        print("\n\n\n")
-    }
 
     // TODO: Get rid of this method once Quest trade adaptor is implemented
     private func getExecutions(for account: QuestTradeKit.Account, interval: DateInterval) {

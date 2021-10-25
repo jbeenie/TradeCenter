@@ -18,9 +18,6 @@
  	- conforms to AccountManagerDataSource (done)
  	- has a session  (done)
  	- delegates function calls to session (done)
- 	
- 	- finish implementing Acticity Factory
- 	- finish converting  Execution/Order/Balance/Position
 
  4. Figure out how to get all activities since the beginning of account 
     - partition date interval (done)
@@ -29,7 +26,16 @@
         - wait for all querries to be asnwered and return all the data all at once? (done)
     - aggregate data (done)
 
- 5. Add ability to set time zone via Quest trade API
+ 5. 
+     - finish implementing Acticity Factory
+     - finish converting  Execution/Order/Balance/Position
+     - calculate total deposited into each account (done)
+        - canadian and american (done)
+     - calculate total fees incurred in each account
+     - calculate total profit in each account
+        - profit = current balance - (total deposited)
+
+ 6. Add ability to set time zone via Quest trade API
 
 
 
