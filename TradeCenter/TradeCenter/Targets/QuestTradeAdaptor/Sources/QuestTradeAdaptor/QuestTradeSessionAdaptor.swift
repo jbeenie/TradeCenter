@@ -14,9 +14,13 @@ public class QuestTradeSessionAdaptor: AccountManagerDataSource {
     private var session: Session
     private let dateIntervalPartitioner: DateIntervalPartitioner
 
+    // Split up date intervals into 30 days
+    // because QuestTrade servers do not accept querries over intervals larger then 30 days
+    private let intervalGranularity: DateIntervalPartitioner.Granularity = .day(30)
+
     public init(session: Session) {
         self.session = session
-        self.dateIntervalPartitioner = DateIntervalPartitioner(granularity: .month)
+        self.dateIntervalPartitioner = DateIntervalPartitioner(granularity: intervalGranularity)
     }
 
     // MARK: - AccountManagerDataSource

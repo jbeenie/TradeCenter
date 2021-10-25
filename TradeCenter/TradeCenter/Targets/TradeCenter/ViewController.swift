@@ -20,7 +20,7 @@ class ViewController: NSViewController {
     var questTradeAdaptor: QuestTradeSessionAdaptor?
     var portfolioManager: PortfolioManager?
 
-    let manuallyGeneratedRefreshToken = "YyJzoJnV-IsCsSPnQvVlXi2vFBqJ43UT0"
+    let manuallyGeneratedRefreshToken = "a2tbwGm0MZTwXAK2ZPo2KyUJFW7QA_gq0"
 
     let dateFirstAccountOpened: Date = QuestTradeAPI.querryDateFormatter.date(from: "2020-03-10T00:00:00")!
 
@@ -28,7 +28,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         let refreshToken = Storage.shared.refreshToken ?? manuallyGeneratedRefreshToken
-        //let refreshToken = manuallyGeneratedRefreshToken
+//        let refreshToken = manuallyGeneratedRefreshToken
 
         sessionManager = SessionManager(refreshToken: refreshToken)
 
@@ -84,10 +84,13 @@ class ViewController: NSViewController {
         let accountManagers = portfolioManager?.accountManagers ?? [:]
         for (account, accountManager) in accountManagers {
             accountManager.getActivities(interval: interval) { activities in
+                print("\n\n\n")
                 print("---------- Account: \(account.number) ----------------")
                 let dividends = activities.filter { $0 is Dividend }
                 let deposits = activities.filter { $0 is Deposit }
                 let forXs = activities.filter { $0 is ForXConversion }
+                let sells = activities.filter { $0 is Sell }
+                let buys = activities.filter { $0 is Buy }
                 print("---------- dividends ----------------")
                 for dividend in dividends {
                     print("type: \(type(of: dividend)) - date: \(dividend.date) - desc: \(dividend.description)")
@@ -102,6 +105,21 @@ class ViewController: NSViewController {
                 for forX in forXs {
                     print("type: \(type(of: forX)) - date: \(forX.date) - desc: \(forX.description)")
                 }
+
+                print("\n")
+                print("---------- buys ----------------")
+                for buy in buys {
+                    print("type: \(type(of: buy)) - date: \(buy.date) - desc: \(buy.description)")
+                }
+
+                print("\n")
+                print("---------- sells ----------------")
+                for sell in sells {
+                    print("type: \(type(of: sell)) - date: \(sell.date) - desc: \(sell.description)")
+                }
+
+                print("--------------------------")
+                print("\n\n\n")
             }
         }
     }
