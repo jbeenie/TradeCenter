@@ -65,63 +65,77 @@ class ViewController: NSViewController {
 
         let portfolio = Portfolio(accounts: accounts.map { Account($0) })
         portfolioManager = PortfolioManager(portfolio: portfolio, dataSource: questTradeAdaptor)
-        
-        guard let startTime = QuestTradeAPI.querryDateFormatter.date(from: "2021-03-02T00:00:00"),
-            let endTime = QuestTradeAPI.querryDateFormatter.date(from: "2021-08-25T00:00:00") else {
-                return
-        }
 
-        let interval = DateInterval(start: startTime, end: endTime)
-
-        for account in accounts {
+//        for account in accounts {
 //            // getExecutions(for: account, startTime: startTime, endTime: endTime)
 //            // getOrders(for: account, startTime: startTime, endTime: endTime, filter: .All)
 //            // getAccountBalances(for: account)
 //            // getAccountPositions(for: account)
 //            getActivities(for: account, startTime: startTime, endTime: endTime)
+//        }
+
+        guard let interval = dateInterval() else {
+            return
         }
 
         let accountManagers = portfolioManager?.accountManagers ?? [:]
         for (account, accountManager) in accountManagers {
-            accountManager.getActivities(interval: interval) { activities in
+            accountManager.getActivities(interval: interval) { [weak self] activities in
                 print("\n\n\n")
                 print("---------- Account: \(account.number) ----------------")
-                let dividends = activities.filter { $0 is Dividend }
-                let deposits = activities.filter { $0 is Deposit }
-                let forXs = activities.filter { $0 is ForXConversion }
-                let sells = activities.filter { $0 is Sell }
-                let buys = activities.filter { $0 is Buy }
-                print("---------- dividends ----------------")
-                for dividend in dividends {
-                    print("type: \(type(of: dividend)) - date: \(dividend.date) - desc: \(dividend.description)")
-                }
-                print("\n")
-                print("---------- deposits ----------------")
-                for deposit in deposits {
-                    print("type: \(type(of: deposit)) - date: \(deposit.date) - desc: \(deposit.description)")
-                }
-                print("\n")
-                print("---------- forX ----------------")
-                for forX in forXs {
-                    print("type: \(type(of: forX)) - date: \(forX.date) - desc: \(forX.description)")
-                }
-
-                print("\n")
-                print("---------- buys ----------------")
-                for buy in buys {
-                    print("type: \(type(of: buy)) - date: \(buy.date) - desc: \(buy.description)")
-                }
-
-                print("\n")
-                print("---------- sells ----------------")
-                for sell in sells {
-                    print("type: \(type(of: sell)) - date: \(sell.date) - desc: \(sell.description)")
-                }
-
-                print("--------------------------")
-                print("\n\n\n")
+                self?.printActivities(activities)
             }
         }
+    }
+
+    func dateInterval() -> DateInterval? {
+        guard var start = QuestTradeAPI.querryDateFormatter.date(from: "2021-03-02T00:00:00"),
+            var end = QuestTradeAPI.querryDateFormatter.date(from: "2021-08-25T00:00:00") else {
+                return nil
+        }
+
+        start = dateFirstAccountOpened
+        end = Date()
+
+
+        return DateInterval(start: start, end: end)
+    }
+
+    func printActivities(_ activities: [TradeCenterModel.Activity]) {
+        let dividends = activities.filter { $0 is Dividend }
+        let deposits = activities.filter { $0 is Deposit }
+        let forXs = activities.filter { $0 is ForXConversion }
+        let sells = activities.filter { $0 is Sell }
+        let buys = activities.filter { $0 is Buy }
+        print("---------- dividends ----------------")
+        for dividend in dividends {
+            print("type: \(type(of: dividend)) - date: \(dividend.date) - desc: \(dividend.description)")
+        }
+        print("\n")
+        print("---------- deposits ----------------")
+        for deposit in deposits {
+            print("type: \(type(of: deposit)) - date: \(deposit.date) - desc: \(deposit.description)")
+        }
+        print("\n")
+        print("---------- forX ----------------")
+        for forX in forXs {
+            print("type: \(type(of: forX)) - date: \(forX.date) - desc: \(forX.description)")
+        }
+
+        print("\n")
+        print("---------- buys ----------------")
+        for buy in buys {
+            print("type: \(type(of: buy)) - date: \(buy.date) - desc: \(buy.description)")
+        }
+
+        print("\n")
+        print("---------- sells ----------------")
+        for sell in sells {
+            print("type: \(type(of: sell)) - date: \(sell.date) - desc: \(sell.description)")
+        }
+
+        print("--------------------------")
+        print("\n\n\n")
     }
 
     // TODO: Get rid of this method once Quest trade adaptor is implemented
