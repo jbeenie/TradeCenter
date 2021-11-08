@@ -12,7 +12,13 @@ import QuestTradeKit
 
 extension TradeCenterModel.Balance {
     init(balance: QuestTradeKit.Balance) {
-        self.init()
-        // TODO: convert balance
+        self.init(
+            currency: Currency(balance.currency),
+            cash: balance.cash,
+            marketValue: balance.marketValue,
+            totalEquity: balance.totalEquity,
+            buyingPower: balance.buyingPower,
+            maintenanceExcess: balance.maintenanceExcess
+        )
     }
 }

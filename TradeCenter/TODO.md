@@ -31,7 +31,7 @@
      - finish converting  Execution/Order/Balance/Position
      - calculate total deposited into each account (done)
         - canadian and american (done)
-     - calculate total fees incurred in each account
+     - calculate total fees incurred in each account 
      - calculate total profit in each account
         - profit = current balance - (total deposited)
 

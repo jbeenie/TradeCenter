@@ -20,15 +20,15 @@ class ViewController: NSViewController {
     var questTradeAdaptor: QuestTradeSessionAdaptor?
     var portfolioManager: PortfolioManager?
 
-    let manuallyGeneratedRefreshToken = "_RtEUfrGWkb37X0CJegdmOKwAotYMXWU0"
+    let manuallyGeneratedRefreshToken = "tC4fexNee5QQL2XmAhXx2EZ46vBdhSxr0"
 
     let dateFirstAccountOpened: Date = QuestTradeAPI.querryDateFormatter.date(from: "2020-03-10T00:00:00")!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        let refreshToken = Storage.shared.refreshToken ?? manuallyGeneratedRefreshToken
-        let refreshToken = manuallyGeneratedRefreshToken
+        let refreshToken = Storage.shared.refreshToken ?? manuallyGeneratedRefreshToken
+//        let refreshToken = manuallyGeneratedRefreshToken
 
         sessionManager = SessionManager(refreshToken: refreshToken)
 
@@ -63,7 +63,7 @@ class ViewController: NSViewController {
             return
         }
 
-        let portfolio = Portfolio(accounts: accounts.map { Account($0) })
+        let portfolio = Portfolio(accounts: accounts.map { TradeCenterModel.Account($0) })
         portfolioManager = PortfolioManager(portfolio: portfolio, dataSource: questTradeAdaptor)
 
 //        for account in accounts {
@@ -80,11 +80,12 @@ class ViewController: NSViewController {
 
         let accountManagers = portfolioManager?.accountManagers ?? [:]
         for (account, accountManager) in accountManagers.reversed() {
-            accountManager.getActivities(interval: interval) { activities in
-                let report = ActivityReport(activities: activities)
-                print("\n\n\n")
-                print("---------- Account: \(account.type) - \(account.number) ----------------")
-                report.printSummary()
+            accountManager.getBalances { balances in
+                accountManager.getActivities(interval: interval) { activities in
+                    let report = AccountReport(activities: activities, account: account, balances: balances)
+                    report.printSummary()
+                    report.printDetail()
+                }
             }
         }
     }
