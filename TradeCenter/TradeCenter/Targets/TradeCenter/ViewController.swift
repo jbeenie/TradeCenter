@@ -83,8 +83,8 @@ class ViewController: NSViewController {
             accountManager.getActivities(interval: interval) { activities in
                 let report = ActivityReport(activities: activities)
                 print("\n\n\n")
-                print("---------- Account: \(account.number) ----------------")
-                report.print()
+                print("---------- Account: \(account.type) - \(account.number) ----------------")
+                report.printSummary()
             }
         }
     }

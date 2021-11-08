@@ -20,4 +20,10 @@ public protocol Trade: Activity {
 
     /// The amount of commission paid to execute the trade.
     var commission: Double { get }
+
+    /// The currency of the amount paid or received.
+    var currency: Currency { get }
+
+    /// The amount of dollars paid or received in the trade.
+    var amount: Double { get }
 }
