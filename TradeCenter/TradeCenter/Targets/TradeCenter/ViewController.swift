@@ -20,15 +20,15 @@ class ViewController: NSViewController {
     var questTradeAdaptor: QuestTradeSessionAdaptor?
     var portfolioManager: PortfolioManager?
 
-    let manuallyGeneratedRefreshToken = "tC4fexNee5QQL2XmAhXx2EZ46vBdhSxr0"
+    let manuallyGeneratedRefreshToken = "V8wkGiudAtYxXvLql1S6cNL6abmOkSf-0"
 
     let dateFirstAccountOpened: Date = QuestTradeAPI.querryDateFormatter.date(from: "2020-03-10T00:00:00")!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let refreshToken = Storage.shared.refreshToken ?? manuallyGeneratedRefreshToken
-//        let refreshToken = manuallyGeneratedRefreshToken
+        var refreshToken = Storage.shared.refreshToken ?? manuallyGeneratedRefreshToken
+//        refreshToken = manuallyGeneratedRefreshToken
 
         sessionManager = SessionManager(refreshToken: refreshToken)
 
@@ -79,12 +79,14 @@ class ViewController: NSViewController {
         }
 
         let accountManagers = portfolioManager?.accountManagers ?? [:]
-        for (account, accountManager) in accountManagers.reversed() {
+        for (account, accountManager) in accountManagers {
+            if account.type == .RRSP {
+                continue
+            }
             accountManager.getBalances { balances in
                 accountManager.getActivities(interval: interval) { activities in
                     let report = AccountReport(activities: activities, account: account, balances: balances)
                     report.printSummary()
-                    report.printDetail()
                 }
             }
         }

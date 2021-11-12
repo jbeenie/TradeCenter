@@ -34,6 +34,7 @@
      - calculate total fees incurred in each account 
      - calculate total profit in each account
         - profit = current balance - (total deposited)
+    - process unknown activites
 
  6. Add ability to set time zone via Quest trade API
 

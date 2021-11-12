@@ -97,7 +97,7 @@ public class QuestTradeSessionAdaptor: AccountManagerDataSource {
         session.getAccountBalances(accountNumber: account.number) { result in
             switch result {
             case .success(let response):
-                completion(response.perCurrencyBalances.map { TradeCenterModel.Balance(balance: $0) })
+                completion(response.combinedBalances.map { TradeCenterModel.Balance(balance: $0) })
                 break
             case .failure(let error):
                 print(error)

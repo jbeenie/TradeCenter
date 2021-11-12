@@ -63,6 +63,11 @@ public class ActivityFactory {
 
         default:
             print("unknown activity type: \(activity.type)")
+            print("\t action: \(activity.action)")
+            print("\t commission: \(activity.commission)")
+            print("\t currency: \(activity.currency)")
+            print("\t netAmount: \(activity.netAmount)")
+            print("\t description: \(activity.description)")
             return nil
         }
     }

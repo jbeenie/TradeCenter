@@ -66,29 +66,28 @@ public struct ActivityReport {
 
         Swift.print("Summary:")
         Swift.print("---------- deposits ----------------")
-        Swift.print("Total CAD deposits: \(totalDeposits(madeIn: .CAD))")
-        Swift.print("Total USD deposits: \(totalDeposits(madeIn: .USD))")
+        Swift.print("Total CAD deposits: \(totalDeposits(madeIn: .CAD).amount)")
+        Swift.print("Total USD deposits: \(totalDeposits(madeIn: .USD).amount)")
 
         Swift.print("---------- dividends ----------------")
-        Swift.print("Total dividends received in CAD: \(totalDividends(receivedIn: .CAD))")
-        Swift.print("Total dividends received in USD: \(totalDividends(receivedIn: .USD))")
+        Swift.print("Total dividends received in CAD: \(totalDividends(receivedIn: .CAD).amount)")
+        Swift.print("Total dividends received in USD: \(totalDividends(receivedIn: .USD).amount)")
 
         Swift.print("---------- forX ----------------")
 
         Swift.print("---------- buys ----------------")
-        Swift.print("Total commission paid for buys in CAD: \(totalCommission(paidOn: buys, in: .CAD))")
-        Swift.print("Total commission paid for buys in USD: \(totalCommission(paidOn: buys, in: .USD))")
+        Swift.print("Total commission paid for buys in CAD: \(totalCommission(paidOn: buys, in: .CAD).amount)")
+        Swift.print("Total commission paid for buys in USD: \(totalCommission(paidOn: buys, in: .USD).amount)")
 
         Swift.print("---------- sells ----------------")
-        Swift.print("Total commission paid on sells in CAD: \(totalCommission(paidOn: sells, in: .CAD))")
-        Swift.print("Total commission paid on sells in USD: \(totalCommission(paidOn: sells, in: .USD))")
+        Swift.print("Total commission paid on sells in CAD: \(totalCommission(paidOn: sells, in: .CAD).amount)")
+        Swift.print("Total commission paid on sells in USD: \(totalCommission(paidOn: sells, in: .USD).amount)")
 
         Swift.print("---------- trades ----------------")
-        Swift.print("Total commission paid on trades in CAD: \(totalCommission(paidOn: trades, in: .CAD))")
-        Swift.print("Total commission paid on trades in USD: \(totalCommission(paidOn: trades, in: .USD))")
+        Swift.print("Total commission paid on trades in CAD: \(totalCommission(paidOn: trades, in: .CAD).amount)")
+        Swift.print("Total commission paid on trades in USD: \(totalCommission(paidOn: trades, in: .USD).amount)")
 
         Swift.print("----------- End Summary ---------------")
-        Swift.print("\n\n\n")
     }
 
     public func printDetail() {
@@ -128,6 +127,5 @@ public struct ActivityReport {
             Swift.print("type: \(type(of: sell)) - date: \(sell.date) - desc: \(sell.description)")
         }
         Swift.print("---------- End Detail ---------------")
-        Swift.print("\n\n\n")
     }
 }
